@@ -12,7 +12,7 @@ output:
 
 Sushant Prabhu and Kiyan Mohebbizadeh
 
-```{r setup, include=FALSE}
+```{r include=FALSE}
 library(tidyverse)
 library(datasets)
 suppressMessages(library(googleVis))
@@ -30,7 +30,7 @@ Demonstrating using `googleVis` Library - Installion and Usage
 install.packages('googleVis')
 ```
 ```{r}
-library(`googleVis`)
+library(googleVis)
 ```
 
 ## Why use googleVis ?
