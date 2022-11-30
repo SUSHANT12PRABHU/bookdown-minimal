@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>googleVis in R</title>
-  <meta name="description" content="googleVis in R" />
+  <title>Sentiment Analysis Processing and Visualization Tutorial</title>
+  <meta name="description" content="Sentiment Analysis Processing and Visualization Tutorial" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="googleVis in R" />
+  <meta property="og:title" content="Sentiment Analysis Processing and Visualization Tutorial" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="googleVis in R" />
+  <meta name="twitter:title" content="Sentiment Analysis Processing and Visualization Tutorial" />
   
   
   
 
-<meta name="author" content="Sushant Prabhu and Kiyan Mohebbizadeh" />
+<meta name="author" content="Lylybell Teran" />
 
 
 
@@ -30,7 +30,7 @@
   
   
 
-
+<link rel="next" href="sentiment-analysis-tutorial.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -131,29 +131,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="#googlevis-in-r"><i class="fa fa-check"></i><b>1</b> googleVis in R</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> googleVis in R</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="#introducing-googlevis"><i class="fa fa-check"></i><b>1.1</b> Introducing googleVis</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="#why-use-googlevis"><i class="fa fa-check"></i><b>1.2</b> Why use googleVis ?</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="#googlevis-rendering-interaction"><i class="fa fa-check"></i><b>1.3</b> googleVis Rendering &amp; Interaction</a>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#introducing-googlevis"><i class="fa fa-check"></i><b>1.1</b> Introducing googleVis</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#why-use-googlevis"><i class="fa fa-check"></i><b>1.2</b> Why use googleVis ?</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#googlevis-rendering-interaction"><i class="fa fa-check"></i><b>1.3</b> googleVis Rendering &amp; Interaction</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="#basic-graphs-line-bar-combo"><i class="fa fa-check"></i><b>1.3.1</b> Basic Graphs (Line, Bar, Combo)</a></li>
-<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="#googlevis-histogram-chart"><i class="fa fa-check"></i><b>1.3.2</b> googleVis Histogram Chart</a></li>
-<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="#googlevis-alluvialsankey-chart"><i class="fa fa-check"></i><b>1.3.3</b> googleVis Alluvial/Sankey Chart</a></li>
-<li class="chapter" data-level="1.3.4" data-path="index.html"><a href="#googlevis-geographic-chart"><i class="fa fa-check"></i><b>1.3.4</b> googleVis Geographic Chart</a></li>
-<li class="chapter" data-level="1.3.5" data-path="index.html"><a href="#googlevis-gauge-chart"><i class="fa fa-check"></i><b>1.3.5</b> googleVis Gauge Chart</a></li>
-<li class="chapter" data-level="1.3.6" data-path="index.html"><a href="#googlevis-tabular-chart"><i class="fa fa-check"></i><b>1.3.6</b> googleVis Tabular Chart</a></li>
-<li class="chapter" data-level="1.3.7" data-path="index.html"><a href="#googlevis-tree-map-chart"><i class="fa fa-check"></i><b>1.3.7</b> googleVis Tree Map Chart</a></li>
-<li class="chapter" data-level="1.3.8" data-path="index.html"><a href="#googlevis-annotation-chart"><i class="fa fa-check"></i><b>1.3.8</b> googleVis Annotation Chart</a></li>
-<li class="chapter" data-level="1.3.9" data-path="index.html"><a href="#googlevis-calendar-chart"><i class="fa fa-check"></i><b>1.3.9</b> googleVis Calendar Chart</a></li>
-<li class="chapter" data-level="1.3.10" data-path="index.html"><a href="#googlevis-timeline-chart"><i class="fa fa-check"></i><b>1.3.10</b> googleVis Timeline Chart</a></li>
-<li class="chapter" data-level="1.3.11" data-path="index.html"><a href="#googlevis-gantt-chart"><i class="fa fa-check"></i><b>1.3.11</b> googleVis Gantt Chart</a></li>
-<li class="chapter" data-level="1.3.12" data-path="index.html"><a href="#googlevis-merging-charts"><i class="fa fa-check"></i><b>1.3.12</b> googleVis Merging Charts</a></li>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#basic-graphs-line-bar-combo"><i class="fa fa-check"></i><b>1.3.1</b> Basic Graphs (Line, Bar, Combo)</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#googlevis-histogram-chart"><i class="fa fa-check"></i><b>1.3.2</b> googleVis Histogram Chart</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#googlevis-alluvialsankey-chart"><i class="fa fa-check"></i><b>1.3.3</b> googleVis Alluvial/Sankey Chart</a></li>
+<li class="chapter" data-level="1.3.4" data-path="index.html"><a href="index.html#googlevis-geographic-chart"><i class="fa fa-check"></i><b>1.3.4</b> googleVis Geographic Chart</a></li>
+<li class="chapter" data-level="1.3.5" data-path="index.html"><a href="index.html#googlevis-gauge-chart"><i class="fa fa-check"></i><b>1.3.5</b> googleVis Gauge Chart</a></li>
+<li class="chapter" data-level="1.3.6" data-path="index.html"><a href="index.html#googlevis-tabular-chart"><i class="fa fa-check"></i><b>1.3.6</b> googleVis Tabular Chart</a></li>
+<li class="chapter" data-level="1.3.7" data-path="index.html"><a href="index.html#googlevis-tree-map-chart"><i class="fa fa-check"></i><b>1.3.7</b> googleVis Tree Map Chart</a></li>
+<li class="chapter" data-level="1.3.8" data-path="index.html"><a href="index.html#googlevis-annotation-chart"><i class="fa fa-check"></i><b>1.3.8</b> googleVis Annotation Chart</a></li>
+<li class="chapter" data-level="1.3.9" data-path="index.html"><a href="index.html#googlevis-calendar-chart"><i class="fa fa-check"></i><b>1.3.9</b> googleVis Calendar Chart</a></li>
+<li class="chapter" data-level="1.3.10" data-path="index.html"><a href="index.html#googlevis-timeline-chart"><i class="fa fa-check"></i><b>1.3.10</b> googleVis Timeline Chart</a></li>
+<li class="chapter" data-level="1.3.11" data-path="index.html"><a href="index.html#googlevis-gantt-chart"><i class="fa fa-check"></i><b>1.3.11</b> googleVis Gantt Chart</a></li>
+<li class="chapter" data-level="1.3.12" data-path="index.html"><a href="index.html#googlevis-merging-charts"><i class="fa fa-check"></i><b>1.3.12</b> googleVis Merging Charts</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="#use-googlevis-in-rstudio"><i class="fa fa-check"></i><b>1.4</b> Use googleVis in RStudio</a>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#use-googlevis-in-rstudio"><i class="fa fa-check"></i><b>1.4</b> Use googleVis in RStudio</a>
 <ul>
-<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="#googlevis-references"><i class="fa fa-check"></i><b>1.4.1</b> googleVis References</a></li>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#googlevis-references"><i class="fa fa-check"></i><b>1.4.1</b> googleVis References</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html"><i class="fa fa-check"></i><b>2</b> Sentiment Analysis Tutorial</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#what-is-sentiment-analysis"><i class="fa fa-check"></i><b>2.1</b> What is Sentiment Analysis?</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#sentiment-lexicons"><i class="fa fa-check"></i><b>2.1.1</b> Sentiment Lexicons</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#case-study-performing-sentiment-analysis-on-novel"><i class="fa fa-check"></i><b>2.2</b> Case Study: Performing Sentiment Analysis on Novel</a></li>
+<li class="chapter" data-level="2.3" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#pre-processing-data-tidy-text"><i class="fa fa-check"></i><b>2.3</b> Pre-processing Data: Tidy-Text</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#initial-analysis-wordclouds"><i class="fa fa-check"></i><b>2.3.1</b> Initial Analysis: Wordclouds</a></li>
+<li class="chapter" data-level="2.3.2" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#sentiment-analysis-lexicon-application"><i class="fa fa-check"></i><b>2.3.2</b> Sentiment Analysis: Lexicon Application</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#most-common-words"><i class="fa fa-check"></i><b>2.4</b> Most Common Words</a></li>
+<li class="chapter" data-level="2.5" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#visualizations"><i class="fa fa-check"></i><b>2.5</b> Visualizations</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#positive---bar-chart-with-afinn"><i class="fa fa-check"></i><b>2.5.1</b> Positive - Bar Chart with Afinn</a></li>
+<li class="chapter" data-level="2.5.2" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#wordclouds-with-bing"><i class="fa fa-check"></i><b>2.5.2</b> Wordclouds with Bing</a></li>
+<li class="chapter" data-level="2.5.3" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#bar-graph-with-nrc"><i class="fa fa-check"></i><b>2.5.3</b> Bar Graph with NRC</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
+<li class="chapter" data-level="2.7" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#references"><i class="fa fa-check"></i><b>2.7</b> References</a></li>
 </ul></li>
 </ul>
 
@@ -164,7 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">googleVis in R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Sentiment Analysis Processing and Visualization Tutorial</a>
           </h1>
         </div>
 
@@ -173,24 +195,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">googleVis in R</h1>
-<p class="author"><em>Sushant Prabhu and Kiyan Mohebbizadeh</em></p>
+<h1 class="title">Sentiment Analysis Processing and Visualization Tutorial</h1>
+<p class="author"><em>Lylybell Teran</em></p>
 </div>
 <div id="googlevis-in-r" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> googleVis in R<a href="#googlevis-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">1</span> googleVis in R<a href="index.html#googlevis-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Sushant Prabhu and Kiyan Mohebbizadeh</p>
 <div id="introducing-googlevis" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Introducing googleVis<a href="#introducing-googlevis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">1.1</span> Introducing googleVis<a href="index.html#introducing-googlevis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>GoogleVis is a package in R that allows users of R to use the Google Charts API.</p>
 </blockquote>
-<p>The interface between <code>R</code> and <code>Google Charts</code> allows users to access Google Charts’ interactive charts. <code>googleVis</code> allows users to use the data in R data frames to create Google Charts without uploading the data onto Google.</p>
-<p>Demonstrating using <code>googleVis</code> Library - Installion and Usage</p>
+<p>The interface between R and Google Charts allows users to access Google Charts’ interactive charts. <code>googleVis</code> allows users to use the data in R data frames to create Google Charts without uploading the data onto Google.</p>
+<p>Demonstrating using <code>googleVis</code> Library - Installation and Usage</p>
 <pre><code>install.packages(&#39;googleVis&#39;)</code></pre>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googleVis)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googleVis)</span></code></pre></div>
 </div>
 <div id="why-use-googlevis" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Why use googleVis ?<a href="#why-use-googlevis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">1.2</span> Why use googleVis ?<a href="index.html#why-use-googlevis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p><code>googleVis</code> package allows users to create interactive visualizations which R’s most popular visualization package (ggplot) does not allow.</p>
 </blockquote>
@@ -201,7 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 <div id="googlevis-rendering-interaction" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> googleVis Rendering &amp; Interaction<a href="#googlevis-rendering-interaction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">1.3</span> googleVis Rendering &amp; Interaction<a href="index.html#googlevis-rendering-interaction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>The output of <code>googleVis</code> can either be embedded into an HTML file or read dynamically. These visualizations are most often rendered online and in a web format. Therefore, a browser and internet connection are required to view the interactive version of the output compared to <code>ggplot</code></p>
 </blockquote>
@@ -212,32 +234,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>googleVis</code> allows users to use the data in R data frames to create Google Charts without uploading the data onto Google.</li>
 </ul>
 <div id="basic-graphs-line-bar-combo" class="section level3 hasAnchor" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> Basic Graphs (Line, Bar, Combo)<a href="#basic-graphs-line-bar-combo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">pet=</span><span class="fu">c</span>(<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;dog&#39;</span>, <span class="st">&#39;hamster&#39;</span>, <span class="st">&#39;snake&#39;</span>),</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">food_cost_monthly=</span><span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">10</span>, <span class="dv">40</span>),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">medical_cost_monthly=</span><span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">5</span>, <span class="dv">50</span>))</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>Line <span class="ot">&lt;-</span> <span class="fu">gvisLineChart</span>(df)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Bar <span class="ot">&lt;-</span> <span class="fu">gvisBarChart</span>(df)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>Column <span class="ot">&lt;-</span> <span class="fu">gvisColumnChart</span>(df)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>SteppedArea <span class="ot">&lt;-</span> <span class="fu">gvisSteppedAreaChart</span>(df, <span class="at">xvar=</span><span class="st">&quot;pet&quot;</span>, </span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">yvar=</span><span class="fu">c</span>(<span class="st">&quot;food_cost_monthly&quot;</span>, <span class="st">&quot;medical_cost_monthly&quot;</span>),</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">options=</span><span class="fu">list</span>(<span class="at">isStacked=</span><span class="cn">TRUE</span>))</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>Combo <span class="ot">&lt;-</span> <span class="fu">gvisComboChart</span>(df, <span class="at">xvar=</span><span class="st">&quot;pet&quot;</span>,</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                        <span class="at">yvar=</span><span class="fu">c</span>(<span class="st">&quot;food_cost_monthly&quot;</span>, <span class="st">&quot;medical_cost_monthly&quot;</span>),</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                        <span class="at">options=</span><span class="fu">list</span>(<span class="at">seriesType=</span><span class="st">&quot;bars&quot;</span>,</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">series=</span><span class="st">&#39;{1: {type:&quot;line&quot;}}&#39;</span>))</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Line)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.1</span> Basic Graphs (Line, Bar, Combo)<a href="index.html#basic-graphs-line-bar-combo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="index.html#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">pet=</span><span class="fu">c</span>(<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;dog&#39;</span>, <span class="st">&#39;hamster&#39;</span>, <span class="st">&#39;snake&#39;</span>),</span>
+<span id="cb3-2"><a href="index.html#cb3-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">food_cost_monthly=</span><span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">10</span>, <span class="dv">40</span>),</span>
+<span id="cb3-3"><a href="index.html#cb3-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">medical_cost_monthly=</span><span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">5</span>, <span class="dv">50</span>))</span>
+<span id="cb3-4"><a href="index.html#cb3-4" aria-hidden="true" tabindex="-1"></a>Line <span class="ot">&lt;-</span> <span class="fu">gvisLineChart</span>(df)</span>
+<span id="cb3-5"><a href="index.html#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="index.html#cb3-6" aria-hidden="true" tabindex="-1"></a>Bar <span class="ot">&lt;-</span> <span class="fu">gvisBarChart</span>(df)</span>
+<span id="cb3-7"><a href="index.html#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="index.html#cb3-8" aria-hidden="true" tabindex="-1"></a>Column <span class="ot">&lt;-</span> <span class="fu">gvisColumnChart</span>(df)</span>
+<span id="cb3-9"><a href="index.html#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="index.html#cb3-10" aria-hidden="true" tabindex="-1"></a>SteppedArea <span class="ot">&lt;-</span> <span class="fu">gvisSteppedAreaChart</span>(df, <span class="at">xvar=</span><span class="st">&quot;pet&quot;</span>, </span>
+<span id="cb3-11"><a href="index.html#cb3-11" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">yvar=</span><span class="fu">c</span>(<span class="st">&quot;food_cost_monthly&quot;</span>, <span class="st">&quot;medical_cost_monthly&quot;</span>),</span>
+<span id="cb3-12"><a href="index.html#cb3-12" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">options=</span><span class="fu">list</span>(<span class="at">isStacked=</span><span class="cn">TRUE</span>))</span>
+<span id="cb3-13"><a href="index.html#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="index.html#cb3-14" aria-hidden="true" tabindex="-1"></a>Combo <span class="ot">&lt;-</span> <span class="fu">gvisComboChart</span>(df, <span class="at">xvar=</span><span class="st">&quot;pet&quot;</span>,</span>
+<span id="cb3-15"><a href="index.html#cb3-15" aria-hidden="true" tabindex="-1"></a>                        <span class="at">yvar=</span><span class="fu">c</span>(<span class="st">&quot;food_cost_monthly&quot;</span>, <span class="st">&quot;medical_cost_monthly&quot;</span>),</span>
+<span id="cb3-16"><a href="index.html#cb3-16" aria-hidden="true" tabindex="-1"></a>                        <span class="at">options=</span><span class="fu">list</span>(<span class="at">seriesType=</span><span class="st">&quot;bars&quot;</span>,</span>
+<span id="cb3-17"><a href="index.html#cb3-17" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">series=</span><span class="st">&#39;{1: {type:&quot;line&quot;}}&#39;</span>))</span>
+<span id="cb3-18"><a href="index.html#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Line)</span></code></pre></div>
 <!-- LineChart generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataLineChartIDb4146b8ce5f9 () {
+function gvisDataLineChartID155f9777c0b55 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -270,13 +292,13 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartLineChartIDb4146b8ce5f9() {
-var data = gvisDataLineChartIDb4146b8ce5f9();
+function drawChartLineChartID155f9777c0b55() {
+var data = gvisDataLineChartID155f9777c0b55();
 var options = {};
 options["allowHtml"] = true;
 
     var chart = new google.visualization.LineChart(
-    document.getElementById('LineChartIDb4146b8ce5f9')
+    document.getElementById('LineChartID155f9777c0b55')
     );
     chart.draw(data,options);
     
@@ -300,9 +322,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartLineChartIDb4146b8ce5f9);
+callbacks.push(drawChartLineChartID155f9777c0b55);
 })();
-function displayChartLineChartIDb4146b8ce5f9() {
+function displayChartLineChartID155f9777c0b55() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -325,19 +347,19 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartIDb4146b8ce5f9"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID155f9777c0b55"></script>
 <!-- divChart -->
-<div id="LineChartIDb4146b8ce5f9" style="width: 500; height: automatic;">
+<div id="LineChartID155f9777c0b55" style="width: 500; height: automatic;">
 
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Bar)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Bar)</span></code></pre></div>
 <!-- BarChart generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataBarChartIDb4146f4e7598 () {
+function gvisDataBarChartID155f970cc36bb () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -370,13 +392,13 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartBarChartIDb4146f4e7598() {
-var data = gvisDataBarChartIDb4146f4e7598();
+function drawChartBarChartID155f970cc36bb() {
+var data = gvisDataBarChartID155f970cc36bb();
 var options = {};
 options["allowHtml"] = true;
 
     var chart = new google.visualization.BarChart(
-    document.getElementById('BarChartIDb4146f4e7598')
+    document.getElementById('BarChartID155f970cc36bb')
     );
     chart.draw(data,options);
     
@@ -400,9 +422,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartBarChartIDb4146f4e7598);
+callbacks.push(drawChartBarChartID155f970cc36bb);
 })();
-function displayChartBarChartIDb4146f4e7598() {
+function displayChartBarChartID155f970cc36bb() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -425,19 +447,19 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBarChartIDb4146f4e7598"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBarChartID155f970cc36bb"></script>
 <!-- divChart -->
-<div id="BarChartIDb4146f4e7598" style="width: 500; height: automatic;">
+<div id="BarChartID155f970cc36bb" style="width: 500; height: automatic;">
 
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Column)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="index.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Column)</span></code></pre></div>
 <!-- ColumnChart generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataColumnChartIDb41480a873f () {
+function gvisDataColumnChartID155f96f1d68d7 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -470,13 +492,13 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartColumnChartIDb41480a873f() {
-var data = gvisDataColumnChartIDb41480a873f();
+function drawChartColumnChartID155f96f1d68d7() {
+var data = gvisDataColumnChartID155f96f1d68d7();
 var options = {};
 options["allowHtml"] = true;
 
     var chart = new google.visualization.ColumnChart(
-    document.getElementById('ColumnChartIDb41480a873f')
+    document.getElementById('ColumnChartID155f96f1d68d7')
     );
     chart.draw(data,options);
     
@@ -500,9 +522,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartColumnChartIDb41480a873f);
+callbacks.push(drawChartColumnChartID155f96f1d68d7);
 })();
-function displayChartColumnChartIDb41480a873f() {
+function displayChartColumnChartID155f96f1d68d7() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -525,19 +547,19 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartIDb41480a873f"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumnChartID155f96f1d68d7"></script>
 <!-- divChart -->
-<div id="ColumnChartIDb41480a873f" style="width: 500; height: automatic;">
+<div id="ColumnChartID155f96f1d68d7" style="width: 500; height: automatic;">
 
 </div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(SteppedArea)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="index.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(SteppedArea)</span></code></pre></div>
 <!-- SteppedAreaChart generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSteppedAreaChartIDb4146b353d38 () {
+function gvisDataSteppedAreaChartID155f973ce343e () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -570,14 +592,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSteppedAreaChartIDb4146b353d38() {
-var data = gvisDataSteppedAreaChartIDb4146b353d38();
+function drawChartSteppedAreaChartID155f973ce343e() {
+var data = gvisDataSteppedAreaChartID155f973ce343e();
 var options = {};
 options["allowHtml"] = true;
 options["isStacked"] = true;
 
     var chart = new google.visualization.SteppedAreaChart(
-    document.getElementById('SteppedAreaChartIDb4146b353d38')
+    document.getElementById('SteppedAreaChartID155f973ce343e')
     );
     chart.draw(data,options);
     
@@ -601,9 +623,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSteppedAreaChartIDb4146b353d38);
+callbacks.push(drawChartSteppedAreaChartID155f973ce343e);
 })();
-function displayChartSteppedAreaChartIDb4146b353d38() {
+function displayChartSteppedAreaChartID155f973ce343e() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -626,19 +648,19 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSteppedAreaChartIDb4146b353d38"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSteppedAreaChartID155f973ce343e"></script>
 <!-- divChart -->
-<div id="SteppedAreaChartIDb4146b353d38" style="width: 500; height: automatic;">
+<div id="SteppedAreaChartID155f973ce343e" style="width: 500; height: automatic;">
 
 </div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Combo)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="index.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Combo)</span></code></pre></div>
 <!-- ComboChart generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataComboChartIDb41474465e84 () {
+function gvisDataComboChartID155f966c80dd7 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -671,15 +693,15 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartComboChartIDb41474465e84() {
-var data = gvisDataComboChartIDb41474465e84();
+function drawChartComboChartID155f966c80dd7() {
+var data = gvisDataComboChartID155f966c80dd7();
 var options = {};
 options["allowHtml"] = true;
 options["seriesType"] = "bars";
 options["series"] = {1: {type:"line"}};
 
     var chart = new google.visualization.ComboChart(
-    document.getElementById('ComboChartIDb41474465e84')
+    document.getElementById('ComboChartID155f966c80dd7')
     );
     chart.draw(data,options);
     
@@ -703,9 +725,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartComboChartIDb41474465e84);
+callbacks.push(drawChartComboChartID155f966c80dd7);
 })();
-function displayChartComboChartIDb41474465e84() {
+function displayChartComboChartID155f966c80dd7() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -728,9 +750,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartComboChartIDb41474465e84"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartComboChartID155f966c80dd7"></script>
 <!-- divChart -->
-<div id="ComboChartIDb41474465e84" style="width: 500; height: automatic;">
+<div id="ComboChartID155f966c80dd7" style="width: 500; height: automatic;">
 
 </div>
 <p>The above charts are best used in comparisons between groups. As seen in the examples, there are comparisons between costs of owning different pets.</p>
@@ -741,18 +763,18 @@ callbacks.shift()();
 </ul>
 </div>
 <div id="googlevis-histogram-chart" class="section level3 hasAnchor" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> googleVis Histogram Chart<a href="#googlevis-histogram-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> iris</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Histogram <span class="ot">&lt;-</span> <span class="fu">gvisHistogram</span>(<span class="fu">data.frame</span>(<span class="at">Sepal_Width =</span> df<span class="sc">$</span>Sepal.Width))</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Histogram)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.2</span> googleVis Histogram Chart<a href="index.html#googlevis-histogram-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="index.html#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> iris</span>
+<span id="cb8-2"><a href="index.html#cb8-2" aria-hidden="true" tabindex="-1"></a>Histogram <span class="ot">&lt;-</span> <span class="fu">gvisHistogram</span>(<span class="fu">data.frame</span>(<span class="at">Sepal_Width =</span> df<span class="sc">$</span>Sepal.Width))</span>
+<span id="cb8-3"><a href="index.html#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="index.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Histogram)</span></code></pre></div>
 <!-- Histogram generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataHistogramIDb414394c4945 () {
+function gvisDataHistogramID155f924b6c4ed () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1213,13 +1235,13 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartHistogramIDb414394c4945() {
-var data = gvisDataHistogramIDb414394c4945();
+function drawChartHistogramID155f924b6c4ed() {
+var data = gvisDataHistogramID155f924b6c4ed();
 var options = {};
 options["allowHtml"] = true;
 
     var chart = new google.visualization.Histogram(
-    document.getElementById('HistogramIDb414394c4945')
+    document.getElementById('HistogramID155f924b6c4ed')
     );
     chart.draw(data,options);
     
@@ -1243,9 +1265,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartHistogramIDb414394c4945);
+callbacks.push(drawChartHistogramID155f924b6c4ed);
 })();
-function displayChartHistogramIDb414394c4945() {
+function displayChartHistogramID155f924b6c4ed() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1268,29 +1290,29 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramIDb414394c4945"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartHistogramID155f924b6c4ed"></script>
 <!-- divChart -->
-<div id="HistogramIDb414394c4945" style="width: 500; height: automatic;">
+<div id="HistogramID155f924b6c4ed" style="width: 500; height: automatic;">
 
 </div>
 <p>The histogram allows users to represent the distribution of one particular group or variable by showing the frequency of the particular group or variable within a range. The charts by <code>googleVis</code> have an advantage over regular histograms because almost no histogram allows or recommends specific information regarding the counts at different points in the visualization, however, with <code>googleVis</code> the audience can not only look at the distribution but access specific metrics through interaction as well.</p>
 </div>
 <div id="googlevis-alluvialsankey-chart" class="section level3 hasAnchor" number="1.3.3">
-<h3><span class="header-section-number">1.3.3</span> googleVis Alluvial/Sankey Chart<a href="#googlevis-alluvialsankey-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">From=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;Math&quot;</span>,<span class="dv">3</span>), <span class="fu">rep</span>(<span class="st">&quot;Science&quot;</span>, <span class="dv">3</span>)),</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">To=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&#39;Lunch&#39;</span>, <span class="st">&#39;Art&#39;</span>, <span class="st">&#39;Music&#39;</span>),<span class="dv">2</span>)),</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">Weight=</span><span class="fu">c</span>(<span class="dv">17</span>,<span class="dv">15</span>,<span class="dv">13</span>,<span class="dv">5</span>,<span class="dv">12</span>,<span class="dv">8</span>))</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>Alluvial <span class="ot">&lt;-</span> <span class="fu">gvisSankey</span>(df, <span class="at">from=</span><span class="st">&quot;From&quot;</span>, <span class="at">to=</span><span class="st">&quot;To&quot;</span>, <span class="at">weight=</span><span class="st">&quot;Weight&quot;</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Alluvial)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.3</span> googleVis Alluvial/Sankey Chart<a href="index.html#googlevis-alluvialsankey-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="index.html#cb9-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">From=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;Math&quot;</span>,<span class="dv">3</span>), <span class="fu">rep</span>(<span class="st">&quot;Science&quot;</span>, <span class="dv">3</span>)),</span>
+<span id="cb9-2"><a href="index.html#cb9-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">To=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&#39;Lunch&#39;</span>, <span class="st">&#39;Art&#39;</span>, <span class="st">&#39;Music&#39;</span>),<span class="dv">2</span>)),</span>
+<span id="cb9-3"><a href="index.html#cb9-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">Weight=</span><span class="fu">c</span>(<span class="dv">17</span>,<span class="dv">15</span>,<span class="dv">13</span>,<span class="dv">5</span>,<span class="dv">12</span>,<span class="dv">8</span>))</span>
+<span id="cb9-4"><a href="index.html#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="index.html#cb9-5" aria-hidden="true" tabindex="-1"></a>Alluvial <span class="ot">&lt;-</span> <span class="fu">gvisSankey</span>(df, <span class="at">from=</span><span class="st">&quot;From&quot;</span>, <span class="at">to=</span><span class="st">&quot;To&quot;</span>, <span class="at">weight=</span><span class="st">&quot;Weight&quot;</span>)</span>
+<span id="cb9-6"><a href="index.html#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="index.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Alluvial)</span></code></pre></div>
 <!-- Sankey generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataSankeyIDb41450a20b0a () {
+function gvisDataSankeyID155f96b9f6033 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1333,14 +1355,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartSankeyIDb41450a20b0a() {
-var data = gvisDataSankeyIDb41450a20b0a();
+function drawChartSankeyID155f96b9f6033() {
+var data = gvisDataSankeyID155f96b9f6033();
 var options = {};
 options["width"] = 400;
 options["height"] = 400;
 
     var chart = new google.visualization.Sankey(
-    document.getElementById('SankeyIDb41450a20b0a')
+    document.getElementById('SankeyID155f96b9f6033')
     );
     chart.draw(data,options);
     
@@ -1364,9 +1386,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartSankeyIDb41450a20b0a);
+callbacks.push(drawChartSankeyID155f96b9f6033);
 })();
-function displayChartSankeyIDb41450a20b0a() {
+function displayChartSankeyID155f96b9f6033() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1389,30 +1411,30 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyIDb41450a20b0a"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartSankeyID155f96b9f6033"></script>
 <!-- divChart -->
-<div id="SankeyIDb41450a20b0a" style="width: 400; height: 400;">
+<div id="SankeyID155f96b9f6033" style="width: 400; height: 400;">
 
 </div>
 <p>Alluvial charts best show the movement of the sample or population among different variables. In the example above the movement of students within a school from class to class is represented. This visualization can be helpful with data that has an ordinal and timeline specific values. With <code>googleVis</code>, the audience is exposed to the general trends with a clean looking chart as well as the specifics of the graph through interaction.</p>
 </div>
 <div id="googlevis-geographic-chart" class="section level3 hasAnchor" number="1.3.4">
-<h3><span class="header-section-number">1.3.4</span> googleVis Geographic Chart<a href="#googlevis-geographic-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">country=</span><span class="fu">c</span>(<span class="st">&#39;US&#39;</span>, <span class="st">&#39;CN&#39;</span>, <span class="st">&#39;BR&#39;</span>, <span class="st">&#39;IS&#39;</span>, <span class="st">&#39;RU&#39;</span>, <span class="st">&#39;TH&#39;</span>, <span class="st">&#39;TR&#39;</span>, <span class="st">&#39;ID&#39;</span>, <span class="st">&#39;MX&#39;</span>, <span class="st">&#39;IR&#39;</span> ),</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">incarceration_rate =</span> <span class="fu">c</span>(<span class="dv">2068800</span>, <span class="dv">1690000</span>, <span class="dv">811707</span>, <span class="dv">478600</span>, <span class="dv">471490</span>, <span class="dv">309282</span>, <span class="dv">291198</span>, <span class="dv">266259</span>, <span class="dv">220866</span>, <span class="dv">189000</span>))</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>G <span class="ot">&lt;-</span> <span class="fu">gvisGeoChart</span>(df, <span class="at">locationvar =</span> <span class="st">&quot;country&quot;</span>, <span class="at">colorvar =</span> <span class="st">&quot;incarceration_rate&quot;</span>,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">options=</span><span class="fu">list</span>(</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>                         <span class="at">gvis.editor=</span><span class="st">&quot;Edit the Geo Chart !&quot;</span>))</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(G)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.4</span> googleVis Geographic Chart<a href="index.html#googlevis-geographic-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="index.html#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">country=</span><span class="fu">c</span>(<span class="st">&#39;US&#39;</span>, <span class="st">&#39;CN&#39;</span>, <span class="st">&#39;BR&#39;</span>, <span class="st">&#39;IS&#39;</span>, <span class="st">&#39;RU&#39;</span>, <span class="st">&#39;TH&#39;</span>, <span class="st">&#39;TR&#39;</span>, <span class="st">&#39;ID&#39;</span>, <span class="st">&#39;MX&#39;</span>, <span class="st">&#39;IR&#39;</span> ),</span>
+<span id="cb10-2"><a href="index.html#cb10-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">incarceration_rate =</span> <span class="fu">c</span>(<span class="dv">2068800</span>, <span class="dv">1690000</span>, <span class="dv">811707</span>, <span class="dv">478600</span>, <span class="dv">471490</span>, <span class="dv">309282</span>, <span class="dv">291198</span>, <span class="dv">266259</span>, <span class="dv">220866</span>, <span class="dv">189000</span>))</span>
+<span id="cb10-3"><a href="index.html#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="index.html#cb10-4" aria-hidden="true" tabindex="-1"></a>G <span class="ot">&lt;-</span> <span class="fu">gvisGeoChart</span>(df, <span class="at">locationvar =</span> <span class="st">&quot;country&quot;</span>, <span class="at">colorvar =</span> <span class="st">&quot;incarceration_rate&quot;</span>,</span>
+<span id="cb10-5"><a href="index.html#cb10-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">options=</span><span class="fu">list</span>(</span>
+<span id="cb10-6"><a href="index.html#cb10-6" aria-hidden="true" tabindex="-1"></a>                         <span class="at">gvis.editor=</span><span class="st">&quot;Edit the Geo Chart !&quot;</span>))</span>
+<span id="cb10-7"><a href="index.html#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="index.html#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(G)</span></code></pre></div>
 <!-- GeoChart generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGeoChartIDb414403ddd7 () {
+function gvisDataGeoChartID155f9159f2a0d () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1464,31 +1486,31 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGeoChartIDb414403ddd7() {
-var data = gvisDataGeoChartIDb414403ddd7();
+function drawChartGeoChartID155f9159f2a0d() {
+var data = gvisDataGeoChartID155f9159f2a0d();
 var options = {};
 options["width"] = 556;
 options["height"] = 347;
 
-    chartGeoChartIDb414403ddd7 = new google.visualization.ChartWrapper({
+    chartGeoChartID155f9159f2a0d = new google.visualization.ChartWrapper({
     dataTable: data,       
     chartType: 'GeoChart',
-    containerId: 'GeoChartIDb414403ddd7',
+    containerId: 'GeoChartID155f9159f2a0d',
     options: options
     });
-    chartGeoChartIDb414403ddd7.draw();
+    chartGeoChartID155f9159f2a0d.draw();
     
 
 }
 
-  function openEditorGeoChartIDb414403ddd7() {
+  function openEditorGeoChartID155f9159f2a0d() {
   var editor = new google.visualization.ChartEditor();
   google.visualization.events.addListener(editor, 'ok',
   function() { 
-  chartGeoChartIDb414403ddd7 = editor.getChartWrapper();  
-  chartGeoChartIDb414403ddd7.draw(document.getElementById('GeoChartIDb414403ddd7')); 
+  chartGeoChartID155f9159f2a0d = editor.getChartWrapper();  
+  chartGeoChartID155f9159f2a0d.draw(document.getElementById('GeoChartID155f9159f2a0d')); 
   }); 
-  editor.openDialog(chartGeoChartIDb414403ddd7);
+  editor.openDialog(chartGeoChartID155f9159f2a0d);
   }
     
  
@@ -1508,9 +1530,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGeoChartIDb414403ddd7);
+callbacks.push(drawChartGeoChartID155f9159f2a0d);
 })();
-function displayChartGeoChartIDb414403ddd7() {
+function displayChartGeoChartID155f9159f2a0d() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1533,32 +1555,32 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartIDb414403ddd7"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID155f9159f2a0d"></script>
 <!-- divChart -->
-<input type='button' onclick='openEditorGeoChartIDb414403ddd7()' value='Edit the Geo Chart !'/><br />
+<input type='button' onclick='openEditorGeoChartID155f9159f2a0d()' value='Edit the Geo Chart !'/><br />
 
-<div id="GeoChartIDb414403ddd7" style="width: 556; height: 347;">
+<div id="GeoChartID155f9159f2a0d" style="width: 556; height: 347;">
 
 </div>
 <p>Map visualizations by <code>googleVis</code> are incredibly easy to create and manipulate. They are useful for comparing different geographic areas to each other. <code>googleVis</code> automatically color scales the values and the interaction allows the map to be simple and clean, but get specific values when hovering over a particular geographic area.</p>
 </div>
 <div id="googlevis-gauge-chart" class="section level3 hasAnchor" number="1.3.5">
-<h3><span class="header-section-number">1.3.5</span> googleVis Gauge Chart<a href="#googlevis-gauge-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">city=</span><span class="fu">c</span>(<span class="st">&#39;Las Vegas&#39;</span>, <span class="st">&#39;Los Angeles&#39;</span>, <span class="st">&#39;Pheonix&#39;</span>, <span class="st">&#39;Dallas&#39;</span>, <span class="st">&#39;Houston&#39;</span>, <span class="st">&#39;Miami&#39;</span>),</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">temp=</span><span class="fu">c</span>(<span class="dv">115</span>, <span class="dv">103</span>, <span class="dv">120</span>, <span class="dv">110</span>, <span class="dv">112</span>, <span class="dv">101</span>))</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>Gauge <span class="ot">&lt;-</span>  <span class="fu">gvisGauge</span>(temperature, </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">options=</span><span class="fu">list</span>(<span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">150</span>, <span class="at">greenFrom=</span><span class="dv">0</span>,</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">greenTo=</span><span class="dv">50</span>, <span class="at">yellowFrom=</span><span class="dv">50</span>, <span class="at">yellowTo=</span><span class="dv">100</span>,</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">redFrom=</span><span class="dv">100</span>, <span class="at">redTo=</span><span class="dv">150</span>, <span class="at">width=</span><span class="dv">400</span>, <span class="at">height=</span><span class="dv">300</span>))</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gauge)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.5</span> googleVis Gauge Chart<a href="index.html#googlevis-gauge-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="index.html#cb11-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">city=</span><span class="fu">c</span>(<span class="st">&#39;Las Vegas&#39;</span>, <span class="st">&#39;Los Angeles&#39;</span>, <span class="st">&#39;Pheonix&#39;</span>, <span class="st">&#39;Dallas&#39;</span>, <span class="st">&#39;Houston&#39;</span>, <span class="st">&#39;Miami&#39;</span>),</span>
+<span id="cb11-2"><a href="index.html#cb11-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">temp=</span><span class="fu">c</span>(<span class="dv">115</span>, <span class="dv">103</span>, <span class="dv">120</span>, <span class="dv">110</span>, <span class="dv">112</span>, <span class="dv">101</span>))</span>
+<span id="cb11-3"><a href="index.html#cb11-3" aria-hidden="true" tabindex="-1"></a>Gauge <span class="ot">&lt;-</span>  <span class="fu">gvisGauge</span>(temperature, </span>
+<span id="cb11-4"><a href="index.html#cb11-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">options=</span><span class="fu">list</span>(<span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">150</span>, <span class="at">greenFrom=</span><span class="dv">0</span>,</span>
+<span id="cb11-5"><a href="index.html#cb11-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">greenTo=</span><span class="dv">50</span>, <span class="at">yellowFrom=</span><span class="dv">50</span>, <span class="at">yellowTo=</span><span class="dv">100</span>,</span>
+<span id="cb11-6"><a href="index.html#cb11-6" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">redFrom=</span><span class="dv">100</span>, <span class="at">redTo=</span><span class="dv">150</span>, <span class="at">width=</span><span class="dv">400</span>, <span class="at">height=</span><span class="dv">300</span>))</span>
+<span id="cb11-7"><a href="index.html#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="index.html#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gauge)</span></code></pre></div>
 <!-- Gauge generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGaugeIDb414a27c172 () {
+function gvisDataGaugeID155f964139d8d () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1594,8 +1616,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGaugeIDb414a27c172() {
-var data = gvisDataGaugeIDb414a27c172();
+function drawChartGaugeID155f964139d8d() {
+var data = gvisDataGaugeID155f964139d8d();
 var options = {};
 options["allowHtml"] = true;
 options["min"] = 0;
@@ -1610,7 +1632,7 @@ options["width"] = 400;
 options["height"] = 300;
 
     var chart = new google.visualization.Gauge(
-    document.getElementById('GaugeIDb414a27c172')
+    document.getElementById('GaugeID155f964139d8d')
     );
     chart.draw(data,options);
     
@@ -1634,9 +1656,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGaugeIDb414a27c172);
+callbacks.push(drawChartGaugeID155f964139d8d);
 })();
-function displayChartGaugeIDb414a27c172() {
+function displayChartGaugeID155f964139d8d() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1659,27 +1681,27 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGaugeIDb414a27c172"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGaugeID155f964139d8d"></script>
 <!-- divChart -->
-<div id="GaugeIDb414a27c172" style="width: 400; height: 300;">
+<div id="GaugeID155f964139d8d" style="width: 400; height: 300;">
 
 </div>
 <p>The gauge charts are not interactive, however they do offer a unique way to model data that is always within a certain range. For example, temperatures, speeds, pressure, etc. This chart allows for quick comparison between groups and aesthetic value to any presentation.</p>
 </div>
 <div id="googlevis-tabular-chart" class="section level3 hasAnchor" number="1.3.6">
-<h3><span class="header-section-number">1.3.6</span> googleVis Tabular Chart<a href="#googlevis-tabular-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Tabular Data Un-Paged</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Population_Tabular_Unpaged <span class="ot">&lt;-</span> <span class="fu">gvisTable</span>(Population[<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>,],</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">formats=</span><span class="fu">list</span>(<span class="at">Population=</span><span class="st">&quot;#,###&quot;</span>,<span class="st">&#39;% of World Population&#39;</span><span class="ot">=</span><span class="st">&#39;#.#%&#39;</span>))</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Population_Tabular_Unpaged)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.6</span> googleVis Tabular Chart<a href="index.html#googlevis-tabular-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="index.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Tabular Data Un-Paged</span></span>
+<span id="cb12-2"><a href="index.html#cb12-2" aria-hidden="true" tabindex="-1"></a>Population_Tabular_Unpaged <span class="ot">&lt;-</span> <span class="fu">gvisTable</span>(Population[<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>,],</span>
+<span id="cb12-3"><a href="index.html#cb12-3" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">formats=</span><span class="fu">list</span>(<span class="at">Population=</span><span class="st">&quot;#,###&quot;</span>,<span class="st">&#39;% of World Population&#39;</span><span class="ot">=</span><span class="st">&#39;#.#%&#39;</span>))</span>
+<span id="cb12-4"><a href="index.html#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="index.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Population_Tabular_Unpaged)</span></code></pre></div>
 <!-- Table generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableIDb41467e2e7a4 () {
+function gvisDataTableID155f93931364f () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1966,8 +1988,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableIDb41467e2e7a4() {
-var data = gvisDataTableIDb41467e2e7a4();
+function drawChartTableID155f93931364f() {
+var data = gvisDataTableID155f93931364f();
 var options = {};
 options["allowHtml"] = true;
 
@@ -1977,7 +1999,7 @@ options["allowHtml"] = true;
   dataFormat2.format(data, 3);
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableIDb41467e2e7a4')
+    document.getElementById('TableID155f93931364f')
     );
     chart.draw(data,options);
     
@@ -2001,9 +2023,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableIDb41467e2e7a4);
+callbacks.push(drawChartTableID155f93931364f);
 })();
-function displayChartTableIDb41467e2e7a4() {
+function displayChartTableID155f93931364f() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2026,26 +2048,26 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableIDb41467e2e7a4"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID155f93931364f"></script>
 <!-- divChart -->
-<div id="TableIDb41467e2e7a4" style="width: 500; height: automatic;">
+<div id="TableID155f93931364f" style="width: 500; height: automatic;">
 
 </div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Tabular Data Paged</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Population_Tabular_paged <span class="ot">&lt;-</span> <span class="fu">gvisTable</span>(Population[<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>,], </span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">formats=</span><span class="fu">list</span>(<span class="at">Population=</span><span class="st">&quot;#,###&quot;</span>,<span class="st">&#39;% of World Population&#39;</span><span class="ot">=</span><span class="st">&#39;#.#%&#39;</span>),</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">options=</span><span class="fu">list</span>(<span class="at">page=</span><span class="st">&#39;enable&#39;</span>,</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                                                   <span class="at">height=</span><span class="st">&#39;automatic&#39;</span>,</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>                                                   <span class="at">width=</span><span class="st">&#39;automatic&#39;</span>))</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Population_Tabular_paged)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="index.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Tabular Data Paged</span></span>
+<span id="cb13-2"><a href="index.html#cb13-2" aria-hidden="true" tabindex="-1"></a>Population_Tabular_paged <span class="ot">&lt;-</span> <span class="fu">gvisTable</span>(Population[<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>,], </span>
+<span id="cb13-3"><a href="index.html#cb13-3" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">formats=</span><span class="fu">list</span>(<span class="at">Population=</span><span class="st">&quot;#,###&quot;</span>,<span class="st">&#39;% of World Population&#39;</span><span class="ot">=</span><span class="st">&#39;#.#%&#39;</span>),</span>
+<span id="cb13-4"><a href="index.html#cb13-4" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">options=</span><span class="fu">list</span>(<span class="at">page=</span><span class="st">&#39;enable&#39;</span>,</span>
+<span id="cb13-5"><a href="index.html#cb13-5" aria-hidden="true" tabindex="-1"></a>                                                   <span class="at">height=</span><span class="st">&#39;automatic&#39;</span>,</span>
+<span id="cb13-6"><a href="index.html#cb13-6" aria-hidden="true" tabindex="-1"></a>                                                   <span class="at">width=</span><span class="st">&#39;automatic&#39;</span>))</span>
+<span id="cb13-7"><a href="index.html#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="index.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Population_Tabular_paged)</span></code></pre></div>
 <!-- Table generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTableIDb41461d5f544 () {
+function gvisDataTableID155f94de499de () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2332,8 +2354,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTableIDb41461d5f544() {
-var data = gvisDataTableIDb41461d5f544();
+function drawChartTableID155f94de499de() {
+var data = gvisDataTableID155f94de499de();
 var options = {};
 options["allowHtml"] = true;
 options["page"] = "enable";
@@ -2344,7 +2366,7 @@ options["page"] = "enable";
   dataFormat2.format(data, 3);
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableIDb41461d5f544')
+    document.getElementById('TableID155f94de499de')
     );
     chart.draw(data,options);
     
@@ -2368,9 +2390,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableIDb41461d5f544);
+callbacks.push(drawChartTableID155f94de499de);
 })();
-function displayChartTableIDb41461d5f544() {
+function displayChartTableID155f94de499de() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2393,28 +2415,28 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableIDb41461d5f544"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID155f94de499de"></script>
 <!-- divChart -->
-<div id="TableIDb41461d5f544" style="width: automatic; height: automatic;">
+<div id="TableID155f94de499de" style="width: automatic; height: automatic;">
 
 </div>
-<p>The data formatted as a table can be paged and sorted. It has a flexible option to select single rows either with the keyboard or the mouse. It also powers sorting on rows across all dimensions in the columns of the dataset. The navigation through paged tabular information is super smooth and simple.</p>
+<p>The data formatted as a table can be paged and sorted. It has a flexible option to select single rows either with the keyboard or the mouse. It also powers sorting on rows across all dimensions in the columns of the dataset. The navigation through paged tabular information is smooth and simple.</p>
 </div>
 <div id="googlevis-tree-map-chart" class="section level3 hasAnchor" number="1.3.7">
-<h3><span class="header-section-number">1.3.7</span> googleVis Tree Map Chart<a href="#googlevis-tree-map-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Country_Tree <span class="ot">&lt;-</span> <span class="fu">gvisTreeMap</span>(Regions, <span class="st">&quot;Region&quot;</span>, <span class="st">&quot;Parent&quot;</span>, <span class="st">&quot;Val&quot;</span>, <span class="st">&quot;Fac&quot;</span>, </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">options=</span><span class="fu">list</span>(<span class="at">width=</span><span class="dv">800</span>, <span class="at">height=</span><span class="dv">500</span>, <span class="at">fontSize=</span><span class="dv">15</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">minColor=</span><span class="st">&#39;#cfe2f3&#39;</span>,<span class="at">midColor=</span><span class="st">&#39;#6fa8dc&#39;</span>,<span class="at">maxColor=</span><span class="st">&#39;#0b5394&#39;</span>,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">headerHeight=</span><span class="dv">10</span>,<span class="at">fontColor=</span><span class="st">&#39;black&#39;</span>,<span class="at">showScale=</span><span class="cn">TRUE</span>))</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Country_Tree)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.7</span> googleVis Tree Map Chart<a href="index.html#googlevis-tree-map-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="index.html#cb14-1" aria-hidden="true" tabindex="-1"></a>Country_Tree <span class="ot">&lt;-</span> <span class="fu">gvisTreeMap</span>(Regions, <span class="st">&quot;Region&quot;</span>, <span class="st">&quot;Parent&quot;</span>, <span class="st">&quot;Val&quot;</span>, <span class="st">&quot;Fac&quot;</span>, </span>
+<span id="cb14-2"><a href="index.html#cb14-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">options=</span><span class="fu">list</span>(<span class="at">width=</span><span class="dv">800</span>, <span class="at">height=</span><span class="dv">500</span>, <span class="at">fontSize=</span><span class="dv">15</span>,</span>
+<span id="cb14-3"><a href="index.html#cb14-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">minColor=</span><span class="st">&#39;#cfe2f3&#39;</span>,<span class="at">midColor=</span><span class="st">&#39;#6fa8dc&#39;</span>,<span class="at">maxColor=</span><span class="st">&#39;#0b5394&#39;</span>,</span>
+<span id="cb14-4"><a href="index.html#cb14-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">headerHeight=</span><span class="dv">10</span>,<span class="at">fontColor=</span><span class="st">&#39;black&#39;</span>,<span class="at">showScale=</span><span class="cn">TRUE</span>))</span>
+<span id="cb14-5"><a href="index.html#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="index.html#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Country_Tree)</span></code></pre></div>
 <!-- TreeMap generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTreeMapIDb41467b3ca6f () {
+function gvisDataTreeMapID155f928e41749 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2494,8 +2516,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTreeMapIDb41467b3ca6f() {
-var data = gvisDataTreeMapIDb41467b3ca6f();
+function drawChartTreeMapID155f928e41749() {
+var data = gvisDataTreeMapID155f928e41749();
 var options = {};
 options["width"] = 800;
 options["height"] = 500;
@@ -2508,7 +2530,7 @@ options["fontColor"] = "black";
 options["showScale"] = true;
 
     var chart = new google.visualization.TreeMap(
-    document.getElementById('TreeMapIDb41467b3ca6f')
+    document.getElementById('TreeMapID155f928e41749')
     );
     chart.draw(data,options);
     
@@ -2532,9 +2554,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTreeMapIDb41467b3ca6f);
+callbacks.push(drawChartTreeMapID155f928e41749);
 })();
-function displayChartTreeMapIDb41467b3ca6f() {
+function displayChartTreeMapID155f928e41749() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2557,31 +2579,31 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTreeMapIDb41467b3ca6f"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTreeMapID155f928e41749"></script>
 <!-- divChart -->
-<div id="TreeMapIDb41467b3ca6f" style="width: 800; height: 500;">
+<div id="TreeMapID155f928e41749" style="width: 800; height: 500;">
 
 </div>
 <p>The <code>googleVis</code> tree map is a visual representation of a data tree, where each node has 0 or more children, and 1 parent barring the root node. One can specify how many levels to display simultaneously, and optionally to display deeper levels. One can move down the tree when the person left-clicks a node, and moves back up the tree when the person right-clicks the graph.The total size of the graph is determined by the size of the elements contained in the graph.</p>
 <p>This <code>googleVis</code> tree map chart captures the relative sizes of data categories, that helps for quick insight of the datapoints that are bigger contributors to each category. Color helps scrutinize datapoints that are underperforming / overperforming) compared to their siblings from the same category.</p>
 </div>
 <div id="googlevis-annotation-chart" class="section level3 hasAnchor" number="1.3.8">
-<h3><span class="header-section-number">1.3.8</span> googleVis Annotation Chart<a href="#googlevis-annotation-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>Stock_Annotation <span class="ot">&lt;-</span> <span class="fu">gvisAnnotationChart</span>(Stock, <span class="at">datevar=</span><span class="st">&quot;Date&quot;</span>,<span class="at">numvar=</span><span class="st">&quot;Value&quot;</span>, <span class="at">idvar=</span><span class="st">&quot;Device&quot;</span>, <span class="at">titlevar=</span><span class="st">&quot;Title&quot;</span>,</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">annotationvar=</span><span class="st">&quot;Annotation&quot;</span>,</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">options=</span><span class="fu">list</span>(<span class="at">displayAnnotations=</span><span class="cn">TRUE</span>,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">chart=</span><span class="st">&quot;{chartArea:{backgroundColor:&#39;#ebf0f7&#39;}}&quot;</span>,</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">legendPosition=</span><span class="st">&#39;newRow&#39;</span>,<span class="at">width=</span><span class="dv">800</span>, <span class="at">height=</span><span class="dv">450</span>,</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">scaleColumns=</span><span class="st">&#39;[0,1]&#39;</span>,<span class="at">scaleType=</span><span class="st">&#39;allmaximized&#39;</span>))</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Stock_Annotation)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.8</span> googleVis Annotation Chart<a href="index.html#googlevis-annotation-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="index.html#cb15-1" aria-hidden="true" tabindex="-1"></a>Stock_Annotation <span class="ot">&lt;-</span> <span class="fu">gvisAnnotationChart</span>(Stock, <span class="at">datevar=</span><span class="st">&quot;Date&quot;</span>,<span class="at">numvar=</span><span class="st">&quot;Value&quot;</span>, <span class="at">idvar=</span><span class="st">&quot;Device&quot;</span>, <span class="at">titlevar=</span><span class="st">&quot;Title&quot;</span>,</span>
+<span id="cb15-2"><a href="index.html#cb15-2" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">annotationvar=</span><span class="st">&quot;Annotation&quot;</span>,</span>
+<span id="cb15-3"><a href="index.html#cb15-3" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">options=</span><span class="fu">list</span>(<span class="at">displayAnnotations=</span><span class="cn">TRUE</span>,</span>
+<span id="cb15-4"><a href="index.html#cb15-4" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">chart=</span><span class="st">&quot;{chartArea:{backgroundColor:&#39;#ebf0f7&#39;}}&quot;</span>,</span>
+<span id="cb15-5"><a href="index.html#cb15-5" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">legendPosition=</span><span class="st">&#39;newRow&#39;</span>,<span class="at">width=</span><span class="dv">800</span>, <span class="at">height=</span><span class="dv">450</span>,</span>
+<span id="cb15-6"><a href="index.html#cb15-6" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">scaleColumns=</span><span class="st">&#39;[0,1]&#39;</span>,<span class="at">scaleType=</span><span class="st">&#39;allmaximized&#39;</span>))</span>
+<span id="cb15-7"><a href="index.html#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="index.html#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Stock_Annotation)</span></code></pre></div>
 <!-- AnnotationChart generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataAnnotationChartIDb414128cc224 () {
+function gvisDataAnnotationChartID155f9386768cd () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2652,8 +2674,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartAnnotationChartIDb414128cc224() {
-var data = gvisDataAnnotationChartIDb414128cc224();
+function drawChartAnnotationChartID155f9386768cd() {
+var data = gvisDataAnnotationChartID155f9386768cd();
 var options = {};
 options["width"] = 800;
 options["height"] = 450;
@@ -2664,7 +2686,7 @@ options["scaleColumns"] = [0,1];
 options["scaleType"] = "allmaximized";
 
     var chart = new google.visualization.AnnotationChart(
-    document.getElementById('AnnotationChartIDb414128cc224')
+    document.getElementById('AnnotationChartID155f9386768cd')
     );
     chart.draw(data,options);
     
@@ -2688,9 +2710,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartAnnotationChartIDb414128cc224);
+callbacks.push(drawChartAnnotationChartID155f9386768cd);
 })();
-function displayChartAnnotationChartIDb414128cc224() {
+function displayChartAnnotationChartID155f9386768cd() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2713,9 +2735,9 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotationChartIDb414128cc224"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotationChartID155f9386768cd"></script>
 <!-- divChart -->
-<div id="AnnotationChartIDb414128cc224" style="width: 800; height: 450;">
+<div id="AnnotationChartID155f9386768cd" style="width: 800; height: 450;">
 
 </div>
 <p>Annotation charts are useful, interactive time series like line charts that enable annotations.These annotated charts are leveraged to highlight specific data or value-add the contextual notes within the visualization.</p>
@@ -2723,18 +2745,18 @@ callbacks.shift()();
 <p>One can also slice through the interactive timeline chart to look for a snapshot of data which is aesthetically pleasing and also provides great detail insights within the same visualization. These annotation charts are SVG (scalable vector graphics) /VML (vector graphics rendering ).</p>
 </div>
 <div id="googlevis-calendar-chart" class="section level3 hasAnchor" number="1.3.9">
-<h3><span class="header-section-number">1.3.9</span> googleVis Calendar Chart<a href="#googlevis-calendar-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Calendar_Temp <span class="ot">&lt;-</span> <span class="fu">gvisCalendar</span>(Cairo, <span class="at">datevar=</span><span class="st">&quot;Date&quot;</span>, <span class="at">numvar=</span><span class="st">&quot;Temp&quot;</span>,</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">options=</span><span class="fu">list</span>(<span class="at">title=</span><span class="st">&quot;Cairo&#39;s variation in Daily</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="st">                                 temperature&quot;</span>,<span class="at">height=</span><span class="dv">400</span>,<span class="at">width=</span><span class="dv">1000</span>,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">calendar=</span><span class="st">&quot;{yearLabel: { fontName:&#39;sans-serif&#39;,</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="st">                                 fontSize: 20, color: &#39;black&#39;, bold: true},</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="st">                                 cellSize: 10,cellColor:{stroke: &#39;black&#39;, strokeOpacity: 0.2},</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="st">                                 focusedCellColor: {stroke:&#39;red&#39;}}&quot;</span>), <span class="at">chartid=</span><span class="st">&quot;Calendar&quot;</span>)</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Calendar_Temp)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.9</span> googleVis Calendar Chart<a href="index.html#googlevis-calendar-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="index.html#cb16-1" aria-hidden="true" tabindex="-1"></a>Calendar_Temp <span class="ot">&lt;-</span> <span class="fu">gvisCalendar</span>(Cairo, <span class="at">datevar=</span><span class="st">&quot;Date&quot;</span>, <span class="at">numvar=</span><span class="st">&quot;Temp&quot;</span>,</span>
+<span id="cb16-2"><a href="index.html#cb16-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">options=</span><span class="fu">list</span>(<span class="at">title=</span><span class="st">&quot;Cairo&#39;s variation in Daily</span></span>
+<span id="cb16-3"><a href="index.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="st">                                 temperature&quot;</span>,<span class="at">height=</span><span class="dv">400</span>,<span class="at">width=</span><span class="dv">1000</span>,</span>
+<span id="cb16-4"><a href="index.html#cb16-4" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">calendar=</span><span class="st">&quot;{yearLabel: { fontName:&#39;sans-serif&#39;,</span></span>
+<span id="cb16-5"><a href="index.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="st">                                 fontSize: 20, color: &#39;black&#39;, bold: true},</span></span>
+<span id="cb16-6"><a href="index.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="st">                                 cellSize: 10,cellColor:{stroke: &#39;black&#39;, strokeOpacity: 0.2},</span></span>
+<span id="cb16-7"><a href="index.html#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="st">                                 focusedCellColor: {stroke:&#39;red&#39;}}&quot;</span>), <span class="at">chartid=</span><span class="st">&quot;Calendar&quot;</span>)</span>
+<span id="cb16-8"><a href="index.html#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="index.html#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Calendar_Temp)</span></code></pre></div>
 <!-- Calendar generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
@@ -7185,30 +7207,30 @@ callbacks.shift()();
 <p>Such calendar charts demonstrate data records, or events, on a daily, weekly, monthly, yearly calendar. It is highly interactive and one can view the value on hovering on any particular time of the entire timeperiod.</p>
 </div>
 <div id="googlevis-timeline-chart" class="section level3 hasAnchor" number="1.3.10">
-<h3><span class="header-section-number">1.3.10</span> googleVis Timeline Chart<a href="#googlevis-timeline-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>Position_Timeline_Data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Position=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;President&quot;</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">&quot;Vice&quot;</span>, <span class="dv">4</span>)),</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">Name=</span><span class="fu">c</span>(<span class="st">&quot;William Clinton&quot;</span>,<span class="st">&quot;George Bush&quot;</span>, <span class="st">&quot;Barack Obama&quot;</span>, <span class="st">&quot;   Donald Trump&quot;</span>,</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                          <span class="st">&quot; Albert Gore&quot;</span>,<span class="st">&quot;Dick Cheney&quot;</span>, <span class="st">&quot;Biden, Jr.&quot;</span>, <span class="st">&quot;Michael Pence&quot;</span>),</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">start=</span><span class="fu">as.Date</span>(<span class="at">x=</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;1993-01-20&quot;</span>,<span class="st">&quot;2001-01-20&quot;</span>, <span class="st">&quot;2009-01-20&quot;</span>,<span class="st">&quot;2017-01-20&quot;</span>),<span class="dv">2</span>)),</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">end=</span><span class="fu">as.Date</span>(<span class="at">x=</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;2001-01-20&quot;</span>,<span class="st">&quot;2009-01-20&quot;</span>, <span class="st">&quot;2017-01-20&quot;</span>, <span class="st">&quot;2021-01-20&quot;</span>),<span class="dv">2</span>)))</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>Timeline <span class="ot">&lt;-</span> <span class="fu">gvisTimeline</span>(<span class="at">data=</span>Position_Timeline_Data, </span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>                         <span class="at">rowlabel=</span><span class="st">&quot;Name&quot;</span>,</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>                         <span class="at">barlabel=</span><span class="st">&quot;Position&quot;</span>,</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>                         <span class="at">start=</span><span class="st">&quot;start&quot;</span>, </span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>                         <span class="at">end=</span><span class="st">&quot;end&quot;</span>,</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>                         <span class="at">options=</span><span class="fu">list</span>(<span class="at">timeline=</span><span class="st">&quot;{groupByRowLabel:false}&quot;</span>,</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">backgroundColor=</span><span class="st">&#39;#e3f4ff&#39;</span>, </span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">height=</span><span class="dv">400</span>,<span class="at">colors=</span><span class="st">&quot;[&#39;#0e407d&#39;, &#39;#78b2ff&#39;, &#39;#3737ab&#39;]&quot;</span>))</span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Timeline)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.10</span> googleVis Timeline Chart<a href="index.html#googlevis-timeline-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="index.html#cb17-1" aria-hidden="true" tabindex="-1"></a>Position_Timeline_Data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Position=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;President&quot;</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">&quot;Vice&quot;</span>, <span class="dv">4</span>)),</span>
+<span id="cb17-2"><a href="index.html#cb17-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">Name=</span><span class="fu">c</span>(<span class="st">&quot;William Clinton&quot;</span>,<span class="st">&quot;George Bush&quot;</span>, <span class="st">&quot;Barack Obama&quot;</span>, <span class="st">&quot;   Donald Trump&quot;</span>,</span>
+<span id="cb17-3"><a href="index.html#cb17-3" aria-hidden="true" tabindex="-1"></a>                          <span class="st">&quot; Albert Gore&quot;</span>,<span class="st">&quot;Dick Cheney&quot;</span>, <span class="st">&quot;Biden, Jr.&quot;</span>, <span class="st">&quot;Michael Pence&quot;</span>),</span>
+<span id="cb17-4"><a href="index.html#cb17-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">start=</span><span class="fu">as.Date</span>(<span class="at">x=</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;1993-01-20&quot;</span>,<span class="st">&quot;2001-01-20&quot;</span>, <span class="st">&quot;2009-01-20&quot;</span>,<span class="st">&quot;2017-01-20&quot;</span>),<span class="dv">2</span>)),</span>
+<span id="cb17-5"><a href="index.html#cb17-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">end=</span><span class="fu">as.Date</span>(<span class="at">x=</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;2001-01-20&quot;</span>,<span class="st">&quot;2009-01-20&quot;</span>, <span class="st">&quot;2017-01-20&quot;</span>, <span class="st">&quot;2021-01-20&quot;</span>),<span class="dv">2</span>)))</span>
+<span id="cb17-6"><a href="index.html#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="index.html#cb17-7" aria-hidden="true" tabindex="-1"></a>Timeline <span class="ot">&lt;-</span> <span class="fu">gvisTimeline</span>(<span class="at">data=</span>Position_Timeline_Data, </span>
+<span id="cb17-8"><a href="index.html#cb17-8" aria-hidden="true" tabindex="-1"></a>                         <span class="at">rowlabel=</span><span class="st">&quot;Name&quot;</span>,</span>
+<span id="cb17-9"><a href="index.html#cb17-9" aria-hidden="true" tabindex="-1"></a>                         <span class="at">barlabel=</span><span class="st">&quot;Position&quot;</span>,</span>
+<span id="cb17-10"><a href="index.html#cb17-10" aria-hidden="true" tabindex="-1"></a>                         <span class="at">start=</span><span class="st">&quot;start&quot;</span>, </span>
+<span id="cb17-11"><a href="index.html#cb17-11" aria-hidden="true" tabindex="-1"></a>                         <span class="at">end=</span><span class="st">&quot;end&quot;</span>,</span>
+<span id="cb17-12"><a href="index.html#cb17-12" aria-hidden="true" tabindex="-1"></a>                         <span class="at">options=</span><span class="fu">list</span>(<span class="at">timeline=</span><span class="st">&quot;{groupByRowLabel:false}&quot;</span>,</span>
+<span id="cb17-13"><a href="index.html#cb17-13" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">backgroundColor=</span><span class="st">&#39;#e3f4ff&#39;</span>, </span>
+<span id="cb17-14"><a href="index.html#cb17-14" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">height=</span><span class="dv">400</span>,<span class="at">colors=</span><span class="st">&quot;[&#39;#0e407d&#39;, &#39;#78b2ff&#39;, &#39;#3737ab&#39;]&quot;</span>))</span>
+<span id="cb17-15"><a href="index.html#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="index.html#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Timeline)</span></code></pre></div>
 <!-- Timeline generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataTimelineIDb4142180f069 () {
+function gvisDataTimelineID155f93f3b1061 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -7270,8 +7292,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartTimelineIDb4142180f069() {
-var data = gvisDataTimelineIDb4142180f069();
+function drawChartTimelineID155f93f3b1061() {
+var data = gvisDataTimelineID155f93f3b1061();
 var options = {};
 options["width"] = 600;
 options["height"] = 400;
@@ -7280,7 +7302,7 @@ options["backgroundColor"] = "#e3f4ff";
 options["colors"] = ['#0e407d', '#78b2ff', '#3737ab'];
 
     var chart = new google.visualization.Timeline(
-    document.getElementById('TimelineIDb4142180f069')
+    document.getElementById('TimelineID155f93f3b1061')
     );
     chart.draw(data,options);
     
@@ -7304,9 +7326,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTimelineIDb4142180f069);
+callbacks.push(drawChartTimelineID155f93f3b1061);
 })();
-function displayChartTimelineIDb4142180f069() {
+function displayChartTimelineID155f93f3b1061() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -7329,45 +7351,45 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTimelineIDb4142180f069"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTimelineID155f93f3b1061"></script>
 <!-- divChart -->
-<div id="TimelineIDb4142180f069" style="width: 600; height: 400;">
+<div id="TimelineID155f93f3b1061" style="width: 600; height: 400;">
 
 </div>
-<p>This <code>googleVis</code> Timeline chart is a great and fascinating way of visualizing the different dates / events. Here is an example, showing duration of Presidents &amp; VPs / Sessions of Congress over the timeline period. The exact times and durations are given when one interactively hovers over the bars.</p>
+<p>This <code>googleVis</code> Timeline chart is a great and fascinating way of visualizing the different dates / events. Here is an example, showing duration of Presidents &amp; Vice Presidents / Sessions of Congress over the timeline period. The exact times and durations are given when one interactively hovers over the bars.</p>
 <p>These timeline charts are versatile visuals for illustrating a sequence of events chronologically. It provides an amazing aid to conceptualize event sequences / processes to gain valuable insights, sometimes maybe summarize historical events, or time frame of minutes, hours, years or datewise.</p>
 </div>
 <div id="googlevis-gantt-chart" class="section level3 hasAnchor" number="1.3.11">
-<h3><span class="header-section-number">1.3.11</span> googleVis Gantt Chart<a href="#googlevis-gantt-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>daysToMilliseconds <span class="ot">&lt;-</span> <span class="cf">function</span>(days){days <span class="sc">*</span> <span class="dv">24</span> <span class="sc">*</span> <span class="dv">60</span> <span class="sc">*</span> <span class="dv">60</span> <span class="sc">*</span> <span class="dv">1000</span>}</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">taskID =</span> <span class="fu">c</span>(<span class="st">&quot;PS&quot;</span>, <span class="st">&quot;EDA&quot;</span>, <span class="st">&quot;R&quot;</span>, <span class="st">&quot;ML&quot;</span>, <span class="st">&quot;DP&quot;</span>),</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">taskName =</span> <span class="fu">c</span>(<span class="st">&quot;Identify Problem Statement&quot;</span>, <span class="st">&quot;EDA Analysis&quot;</span>, <span class="st">&quot;Research&quot;</span>,</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>                              <span class="st">&quot;Machine Learning Modelling&quot;</span>, <span class="st">&quot;Data Preprocessing&quot;</span>),</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">resource =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">&quot;write&quot;</span>, <span class="st">&quot;write&quot;</span>, <span class="st">&quot;complete&quot;</span>, <span class="st">&quot;write&quot;</span>),</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">start =</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">&quot;2022-10-01&quot;</span>), <span class="cn">NA</span>, <span class="fu">as.Date</span>(<span class="st">&quot;2022-10-02&quot;</span>), <span class="fu">as.Date</span>(<span class="st">&quot;2022-10-08&quot;</span>), <span class="cn">NA</span>),</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">end =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">&quot;2022-10-04&quot;</span>, <span class="st">&quot;2022-10-08&quot;</span>, <span class="st">&quot;2022-10-08&quot;</span>,</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">&quot;2022-10-13&quot;</span>, <span class="st">&quot;2022-10-05&quot;</span>)),</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">duration =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="fu">daysToMilliseconds</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))),</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">percentComplete =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">25</span>, <span class="dv">20</span>, <span class="dv">0</span>, <span class="dv">100</span>),</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">dependencies =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">&quot;PS, DP&quot;</span>, <span class="cn">NA</span>,</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>                 <span class="st">&quot;EDA&quot;</span>, <span class="st">&quot;PS&quot;</span>))</span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>Gantt_Tasks <span class="ot">&lt;-</span> <span class="fu">gvisGantt</span>(dat, <span class="at">taskID =</span> <span class="st">&quot;taskID&quot;</span>,<span class="at">taskName =</span> <span class="st">&quot;taskName&quot;</span>,<span class="at">resource =</span> <span class="st">&quot;resource&quot;</span>,</span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>                         <span class="at">start =</span> <span class="st">&quot;start&quot;</span>,<span class="at">end =</span> <span class="st">&quot;end&quot;</span>,<span class="at">duration =</span> <span class="st">&quot;duration&quot;</span>,<span class="at">percentComplete =</span> <span class="st">&quot;percentComplete&quot;</span>,</span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>                         <span class="at">dependencies =</span> <span class="st">&quot;dependencies&quot;</span>,</span>
-<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>                         <span class="at">options =</span> <span class="fu">list</span>(<span class="at">height =</span> <span class="dv">300</span>,</span>
-<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>                         <span class="at">gantt =</span> <span class="st">&quot;{criticalPathEnabled:true,innerGridHorizLine: {</span></span>
-<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="st">                         stroke: &#39;#e3f4ff&#39;,strokeWidth: 2},innerGridTrack: {fill: &#39;#e8f3fa&#39;},innerGridDarkTrack:</span></span>
-<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="st">                         {fill: &#39;#c7e9ff&#39;},labelStyle: {fontName: &#39;sans-serif&#39;,fontSize: 16}}&quot;</span>))</span>
-<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gantt_Tasks)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.11</span> googleVis Gantt Chart<a href="index.html#googlevis-gantt-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="index.html#cb18-1" aria-hidden="true" tabindex="-1"></a>daysToMilliseconds <span class="ot">&lt;-</span> <span class="cf">function</span>(days){days <span class="sc">*</span> <span class="dv">24</span> <span class="sc">*</span> <span class="dv">60</span> <span class="sc">*</span> <span class="dv">60</span> <span class="sc">*</span> <span class="dv">1000</span>}</span>
+<span id="cb18-2"><a href="index.html#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">taskID =</span> <span class="fu">c</span>(<span class="st">&quot;PS&quot;</span>, <span class="st">&quot;EDA&quot;</span>, <span class="st">&quot;R&quot;</span>, <span class="st">&quot;ML&quot;</span>, <span class="st">&quot;DP&quot;</span>),</span>
+<span id="cb18-3"><a href="index.html#cb18-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">taskName =</span> <span class="fu">c</span>(<span class="st">&quot;Identify Problem Statement&quot;</span>, <span class="st">&quot;EDA Analysis&quot;</span>, <span class="st">&quot;Research&quot;</span>,</span>
+<span id="cb18-4"><a href="index.html#cb18-4" aria-hidden="true" tabindex="-1"></a>                              <span class="st">&quot;Machine Learning Modelling&quot;</span>, <span class="st">&quot;Data Preprocessing&quot;</span>),</span>
+<span id="cb18-5"><a href="index.html#cb18-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">resource =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">&quot;write&quot;</span>, <span class="st">&quot;write&quot;</span>, <span class="st">&quot;complete&quot;</span>, <span class="st">&quot;write&quot;</span>),</span>
+<span id="cb18-6"><a href="index.html#cb18-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">start =</span> <span class="fu">c</span>(<span class="fu">as.Date</span>(<span class="st">&quot;2022-10-01&quot;</span>), <span class="cn">NA</span>, <span class="fu">as.Date</span>(<span class="st">&quot;2022-10-02&quot;</span>), <span class="fu">as.Date</span>(<span class="st">&quot;2022-10-08&quot;</span>), <span class="cn">NA</span>),</span>
+<span id="cb18-7"><a href="index.html#cb18-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">end =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">&quot;2022-10-04&quot;</span>, <span class="st">&quot;2022-10-08&quot;</span>, <span class="st">&quot;2022-10-08&quot;</span>,</span>
+<span id="cb18-8"><a href="index.html#cb18-8" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">&quot;2022-10-13&quot;</span>, <span class="st">&quot;2022-10-05&quot;</span>)),</span>
+<span id="cb18-9"><a href="index.html#cb18-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">duration =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="fu">daysToMilliseconds</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))),</span>
+<span id="cb18-10"><a href="index.html#cb18-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">percentComplete =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">25</span>, <span class="dv">20</span>, <span class="dv">0</span>, <span class="dv">100</span>),</span>
+<span id="cb18-11"><a href="index.html#cb18-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">dependencies =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">&quot;PS, DP&quot;</span>, <span class="cn">NA</span>,</span>
+<span id="cb18-12"><a href="index.html#cb18-12" aria-hidden="true" tabindex="-1"></a>                 <span class="st">&quot;EDA&quot;</span>, <span class="st">&quot;PS&quot;</span>))</span>
+<span id="cb18-13"><a href="index.html#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="index.html#cb18-14" aria-hidden="true" tabindex="-1"></a>Gantt_Tasks <span class="ot">&lt;-</span> <span class="fu">gvisGantt</span>(dat, <span class="at">taskID =</span> <span class="st">&quot;taskID&quot;</span>,<span class="at">taskName =</span> <span class="st">&quot;taskName&quot;</span>,<span class="at">resource =</span> <span class="st">&quot;resource&quot;</span>,</span>
+<span id="cb18-15"><a href="index.html#cb18-15" aria-hidden="true" tabindex="-1"></a>                         <span class="at">start =</span> <span class="st">&quot;start&quot;</span>,<span class="at">end =</span> <span class="st">&quot;end&quot;</span>,<span class="at">duration =</span> <span class="st">&quot;duration&quot;</span>,<span class="at">percentComplete =</span> <span class="st">&quot;percentComplete&quot;</span>,</span>
+<span id="cb18-16"><a href="index.html#cb18-16" aria-hidden="true" tabindex="-1"></a>                         <span class="at">dependencies =</span> <span class="st">&quot;dependencies&quot;</span>,</span>
+<span id="cb18-17"><a href="index.html#cb18-17" aria-hidden="true" tabindex="-1"></a>                         <span class="at">options =</span> <span class="fu">list</span>(<span class="at">height =</span> <span class="dv">300</span>,</span>
+<span id="cb18-18"><a href="index.html#cb18-18" aria-hidden="true" tabindex="-1"></a>                         <span class="at">gantt =</span> <span class="st">&quot;{criticalPathEnabled:true,innerGridHorizLine: {</span></span>
+<span id="cb18-19"><a href="index.html#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="st">                         stroke: &#39;#e3f4ff&#39;,strokeWidth: 2},innerGridTrack: {fill: &#39;#e8f3fa&#39;},innerGridDarkTrack:</span></span>
+<span id="cb18-20"><a href="index.html#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="st">                         {fill: &#39;#c7e9ff&#39;},labelStyle: {fontName: &#39;sans-serif&#39;,fontSize: 16}}&quot;</span>))</span>
+<span id="cb18-21"><a href="index.html#cb18-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-22"><a href="index.html#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gantt_Tasks)</span></code></pre></div>
 <!-- Gantt generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGanttIDb4144d084de5 () {
+function gvisDataGanttID155f931b79b3a () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -7435,8 +7457,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGanttIDb4144d084de5() {
-var data = gvisDataGanttIDb4144d084de5();
+function drawChartGanttID155f931b79b3a() {
+var data = gvisDataGanttID155f931b79b3a();
 var options = {};
 options["width"] = 600;
 options["height"] = 300;
@@ -7445,7 +7467,7 @@ options["gantt"] = {criticalPathEnabled:true,innerGridHorizLine: {
                          {fill: '#c7e9ff'},labelStyle: {fontName: 'sans-serif',fontSize: 16}};
 
     var chart = new google.visualization.Gantt(
-    document.getElementById('GanttIDb4144d084de5')
+    document.getElementById('GanttID155f931b79b3a')
     );
     chart.draw(data,options);
     
@@ -7469,9 +7491,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGanttIDb4144d084de5);
+callbacks.push(drawChartGanttID155f931b79b3a);
 })();
-function displayChartGanttIDb4144d084de5() {
+function displayChartGanttID155f931b79b3a() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -7494,33 +7516,33 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGanttIDb4144d084de5"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGanttID155f931b79b3a"></script>
 <!-- divChart -->
-<div id="GanttIDb4144d084de5" style="width: 600; height: 300;">
+<div id="GanttID155f931b79b3a" style="width: 600; height: 300;">
 
 </div>
 <p><code>googleVis</code> Gantt charts would help teams to plan work around deadlines and allocate resources efficiently.</p>
 <p>Project planners also leverage Gantt charts to maintain a bird’s eye high level view of projects and track them. These depict the relationship between the start and end dates of tasks, milestones, and dependent tasks for each of them over the entire timeline of the project. This Gantt chart illustrates the breakdown of a project into its component tasks very effectively.</p>
 </div>
 <div id="googlevis-merging-charts" class="section level3 hasAnchor" number="1.3.12">
-<h3><span class="header-section-number">1.3.12</span> googleVis Merging Charts<a href="#googlevis-merging-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>Geographic <span class="ot">&lt;-</span> <span class="fu">gvisGeoChart</span>(Exports,</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                           <span class="at">locationvar=</span><span class="st">&quot;Country&quot;</span>,<span class="at">colorvar=</span><span class="st">&quot;Profit&quot;</span>,</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                           <span class="at">options=</span><span class="fu">list</span>(<span class="at">width=</span><span class="dv">400</span>, <span class="at">height=</span><span class="dv">200</span>))</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>Tabular <span class="ot">&lt;-</span> <span class="fu">gvisTable</span>(Exports,</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">options=</span><span class="fu">list</span>(<span class="at">width=</span><span class="dv">400</span>, <span class="at">height=</span><span class="dv">400</span>))</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>Merged_Charts <span class="ot">&lt;-</span> <span class="fu">gvisMerge</span>(Geographic, Tabular, <span class="at">horizontal=</span><span class="cn">FALSE</span>, <span class="at">tableOptions=</span><span class="st">&quot;bgcolor=</span><span class="sc">\&quot;</span><span class="st">#7cdeb5</span><span class="sc">\&quot;</span><span class="st">&quot;</span>)</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Merged_Charts)</span></code></pre></div>
+<h3><span class="header-section-number">1.3.12</span> googleVis Merging Charts<a href="index.html#googlevis-merging-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="index.html#cb19-1" aria-hidden="true" tabindex="-1"></a>Geographic <span class="ot">&lt;-</span> <span class="fu">gvisGeoChart</span>(Exports,</span>
+<span id="cb19-2"><a href="index.html#cb19-2" aria-hidden="true" tabindex="-1"></a>                           <span class="at">locationvar=</span><span class="st">&quot;Country&quot;</span>,<span class="at">colorvar=</span><span class="st">&quot;Profit&quot;</span>,</span>
+<span id="cb19-3"><a href="index.html#cb19-3" aria-hidden="true" tabindex="-1"></a>                           <span class="at">options=</span><span class="fu">list</span>(<span class="at">width=</span><span class="dv">400</span>, <span class="at">height=</span><span class="dv">200</span>))</span>
+<span id="cb19-4"><a href="index.html#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="index.html#cb19-5" aria-hidden="true" tabindex="-1"></a>Tabular <span class="ot">&lt;-</span> <span class="fu">gvisTable</span>(Exports,</span>
+<span id="cb19-6"><a href="index.html#cb19-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">options=</span><span class="fu">list</span>(<span class="at">width=</span><span class="dv">400</span>, <span class="at">height=</span><span class="dv">400</span>))</span>
+<span id="cb19-7"><a href="index.html#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="index.html#cb19-8" aria-hidden="true" tabindex="-1"></a>Merged_Charts <span class="ot">&lt;-</span> <span class="fu">gvisMerge</span>(Geographic, Tabular, <span class="at">horizontal=</span><span class="cn">FALSE</span>, <span class="at">tableOptions=</span><span class="st">&quot;bgcolor=</span><span class="sc">\&quot;</span><span class="st">#7cdeb5</span><span class="sc">\&quot;</span><span class="st">&quot;</span>)</span>
+<span id="cb19-9"><a href="index.html#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="index.html#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Merged_Charts)</span></code></pre></div>
 <!-- GeoChart generated in R 4.2.1 by googleVis 0.7.0 package -->
-<!-- Tue Nov  8 17:29:22 2022 -->
+<!-- Mon Nov 14 16:07:44 2022 -->
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataGeoChartIDb4145e072dac () {
+function gvisDataGeoChartID155f9500a6edd () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -7573,7 +7595,7 @@ return(data);
 
 
 // jsData 
-function gvisDataTableIDb4142947a76e () {
+function gvisDataTableID155f95cf49838 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -7636,14 +7658,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartGeoChartIDb4145e072dac() {
-var data = gvisDataGeoChartIDb4145e072dac();
+function drawChartGeoChartID155f9500a6edd() {
+var data = gvisDataGeoChartID155f9500a6edd();
 var options = {};
 options["width"] = 400;
 options["height"] = 200;
 
     var chart = new google.visualization.GeoChart(
-    document.getElementById('GeoChartIDb4145e072dac')
+    document.getElementById('GeoChartID155f9500a6edd')
     );
     chart.draw(data,options);
     
@@ -7653,15 +7675,15 @@ options["height"] = 200;
 
 
 // jsDrawChart
-function drawChartTableIDb4142947a76e() {
-var data = gvisDataTableIDb4142947a76e();
+function drawChartTableID155f95cf49838() {
+var data = gvisDataTableID155f95cf49838();
 var options = {};
 options["allowHtml"] = true;
 options["width"] = 400;
 options["height"] = 400;
 
     var chart = new google.visualization.Table(
-    document.getElementById('TableIDb4142947a76e')
+    document.getElementById('TableID155f95cf49838')
     );
     chart.draw(data,options);
     
@@ -7685,9 +7707,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartGeoChartIDb4145e072dac);
+callbacks.push(drawChartGeoChartID155f9500a6edd);
 })();
-function displayChartGeoChartIDb4145e072dac() {
+function displayChartGeoChartID155f9500a6edd() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -7724,9 +7746,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableIDb4142947a76e);
+callbacks.push(drawChartTableID155f95cf49838);
 })();
-function displayChartTableIDb4142947a76e() {
+function displayChartTableID155f95cf49838() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -7749,14 +7771,14 @@ callbacks.shift()();
 // jsFooter
 </script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartIDb4145e072dac"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID155f9500a6edd"></script>
 <!-- jsChart -->
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableIDb4142947a76e"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID155f95cf49838"></script>
 <table bgcolor="#7cdeb5">
 <tr>
 <td>
 <!-- divChart -->
-<div id="GeoChartIDb4145e072dac" style="width: 400; height: 200;">
+<div id="GeoChartID155f9500a6edd" style="width: 400; height: 200;">
 
 </div>
 </td>
@@ -7764,7 +7786,7 @@ callbacks.shift()();
 <tr>
 <td>
 <!-- divChart -->
-<div id="TableIDb4142947a76e" style="width: 400; height: 400;">
+<div id="TableID155f95cf49838" style="width: 400; height: 400;">
 
 </div>
 </td>
@@ -7775,7 +7797,7 @@ callbacks.shift()();
 </div>
 </div>
 <div id="use-googlevis-in-rstudio" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Use googleVis in RStudio<a href="#use-googlevis-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">1.4</span> Use googleVis in RStudio<a href="index.html#use-googlevis-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Using googleVis in RStudio is straightforward. By default, the RStudio renders the charts in a new webpage -</p>
 <pre><code>plot(Chart)</code></pre>
 <p>On the other hand, to view it within RStudio,
@@ -7785,7 +7807,7 @@ callbacks.shift()();
 <p>To Knit the Rmd Markdown file to HTML, to perform the following command set the Chunk option results to <code>asis</code> with <code>{r ChartExample, results='asis', tidy=FALSE}</code> and <code>plot(Chart, 'chart')</code></p>
 </blockquote>
 <div id="googlevis-references" class="section level3 hasAnchor" number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> googleVis References<a href="#googlevis-references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">1.4.1</span> googleVis References<a href="index.html#googlevis-references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://mages.github.io/googleVis/">Documentation</a></li>
 <li><a href="https://developers.google.com/chart/interactive/docs/quick_start">Google Charts</a></li>
@@ -7796,8 +7818,9 @@ callbacks.shift()();
 <blockquote>
 <p>Thank you for learning <code>googleVis</code> with us !</p>
 </blockquote>
-<!-- If you need PDF output, uncomment bookdown::pdf_book above in YAML. You will need a LaTeX installation, e.g., https://yihui.name/tinytex/ -->
 
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="index.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(knitr)</span></span>
+<span id="cb22-2"><a href="index.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># library(tinytex)</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -7807,7 +7830,7 @@ callbacks.shift()();
         </div>
       </div>
 
-
+<a href="sentiment-analysis-tutorial.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

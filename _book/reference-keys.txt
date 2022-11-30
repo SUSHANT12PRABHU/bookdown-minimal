@@ -1,3 +1,7 @@
+fig:unnamed-chunk-10
+fig:unnamed-chunk-15
+fig:unnamed-chunk-16
+fig:unnamed-chunk-17
 googlevis-in-r
 introducing-googlevis
 why-use-googlevis
@@ -16,3 +20,18 @@ googlevis-gantt-chart
 googlevis-merging-charts
 use-googlevis-in-rstudio
 googlevis-references
+sentiment-analysis-tutorial
+what-is-sentiment-analysis
+sentiment-lexicons
+case-study-performing-sentiment-analysis-on-novel
+pre-processing-data-tidy-text
+initial-analysis-wordclouds
+sentiment-analysis-lexicon-application
+creating-sentiment-datasets
+most-common-words
+visualizations
+positive---bar-chart-with-afinn
+wordclouds-with-bing
+bar-graph-with-nrc
+summary
+references

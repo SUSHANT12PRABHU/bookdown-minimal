@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Sentiment Analysis Tutorial | Sentiment Analysis Processing and Visualization Tutorial</title>
+  <meta name="description" content="2 Sentiment Analysis Tutorial | Sentiment Analysis Processing and Visualization Tutorial" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Sentiment Analysis Tutorial | Sentiment Analysis Processing and Visualization Tutorial" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Sentiment Analysis Tutorial | Sentiment Analysis Processing and Visualization Tutorial" />
+  
+  
+  
+
+<meta name="author" content="Lylybell Teran" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> googleVis in R</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#introducing-googlevis"><i class="fa fa-check"></i><b>1.1</b> Introducing googleVis</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#why-use-googlevis"><i class="fa fa-check"></i><b>1.2</b> Why use googleVis ?</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#googlevis-rendering-interaction"><i class="fa fa-check"></i><b>1.3</b> googleVis Rendering &amp; Interaction</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#basic-graphs-line-bar-combo"><i class="fa fa-check"></i><b>1.3.1</b> Basic Graphs (Line, Bar, Combo)</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#googlevis-histogram-chart"><i class="fa fa-check"></i><b>1.3.2</b> googleVis Histogram Chart</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#googlevis-alluvialsankey-chart"><i class="fa fa-check"></i><b>1.3.3</b> googleVis Alluvial/Sankey Chart</a></li>
+<li class="chapter" data-level="1.3.4" data-path="index.html"><a href="index.html#googlevis-geographic-chart"><i class="fa fa-check"></i><b>1.3.4</b> googleVis Geographic Chart</a></li>
+<li class="chapter" data-level="1.3.5" data-path="index.html"><a href="index.html#googlevis-gauge-chart"><i class="fa fa-check"></i><b>1.3.5</b> googleVis Gauge Chart</a></li>
+<li class="chapter" data-level="1.3.6" data-path="index.html"><a href="index.html#googlevis-tabular-chart"><i class="fa fa-check"></i><b>1.3.6</b> googleVis Tabular Chart</a></li>
+<li class="chapter" data-level="1.3.7" data-path="index.html"><a href="index.html#googlevis-tree-map-chart"><i class="fa fa-check"></i><b>1.3.7</b> googleVis Tree Map Chart</a></li>
+<li class="chapter" data-level="1.3.8" data-path="index.html"><a href="index.html#googlevis-annotation-chart"><i class="fa fa-check"></i><b>1.3.8</b> googleVis Annotation Chart</a></li>
+<li class="chapter" data-level="1.3.9" data-path="index.html"><a href="index.html#googlevis-calendar-chart"><i class="fa fa-check"></i><b>1.3.9</b> googleVis Calendar Chart</a></li>
+<li class="chapter" data-level="1.3.10" data-path="index.html"><a href="index.html#googlevis-timeline-chart"><i class="fa fa-check"></i><b>1.3.10</b> googleVis Timeline Chart</a></li>
+<li class="chapter" data-level="1.3.11" data-path="index.html"><a href="index.html#googlevis-gantt-chart"><i class="fa fa-check"></i><b>1.3.11</b> googleVis Gantt Chart</a></li>
+<li class="chapter" data-level="1.3.12" data-path="index.html"><a href="index.html#googlevis-merging-charts"><i class="fa fa-check"></i><b>1.3.12</b> googleVis Merging Charts</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#use-googlevis-in-rstudio"><i class="fa fa-check"></i><b>1.4</b> Use googleVis in RStudio</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#googlevis-references"><i class="fa fa-check"></i><b>1.4.1</b> googleVis References</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html"><i class="fa fa-check"></i><b>2</b> Sentiment Analysis Tutorial</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#what-is-sentiment-analysis"><i class="fa fa-check"></i><b>2.1</b> What is Sentiment Analysis?</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#sentiment-lexicons"><i class="fa fa-check"></i><b>2.1.1</b> Sentiment Lexicons</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#case-study-performing-sentiment-analysis-on-novel"><i class="fa fa-check"></i><b>2.2</b> Case Study: Performing Sentiment Analysis on Novel</a></li>
+<li class="chapter" data-level="2.3" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#pre-processing-data-tidy-text"><i class="fa fa-check"></i><b>2.3</b> Pre-processing Data: Tidy-Text</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#initial-analysis-wordclouds"><i class="fa fa-check"></i><b>2.3.1</b> Initial Analysis: Wordclouds</a></li>
+<li class="chapter" data-level="2.3.2" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#sentiment-analysis-lexicon-application"><i class="fa fa-check"></i><b>2.3.2</b> Sentiment Analysis: Lexicon Application</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#most-common-words"><i class="fa fa-check"></i><b>2.4</b> Most Common Words</a></li>
+<li class="chapter" data-level="2.5" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#visualizations"><i class="fa fa-check"></i><b>2.5</b> Visualizations</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#positive---bar-chart-with-afinn"><i class="fa fa-check"></i><b>2.5.1</b> Positive - Bar Chart with Afinn</a></li>
+<li class="chapter" data-level="2.5.2" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#wordclouds-with-bing"><i class="fa fa-check"></i><b>2.5.2</b> Wordclouds with Bing</a></li>
+<li class="chapter" data-level="2.5.3" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#bar-graph-with-nrc"><i class="fa fa-check"></i><b>2.5.3</b> Bar Graph with NRC</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
+<li class="chapter" data-level="2.7" data-path="sentiment-analysis-tutorial.html"><a href="sentiment-analysis-tutorial.html#references"><i class="fa fa-check"></i><b>2.7</b> References</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Sentiment Analysis Processing and Visualization Tutorial</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sentiment-analysis-tutorial" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Sentiment Analysis Tutorial<a href="sentiment-analysis-tutorial.html#sentiment-analysis-tutorial" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this tutorial we will learn how to convert to tidy data, conduct sentiment analysis, and visualize results using R. The purpose of sentiment analysis model is to categorize words based on their sentiments such as positive, negative, and/or its magnitude.</p>
+<p>We will use the following packages in this tutorial:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="sentiment-analysis-tutorial.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The following packages must first be installed using the the command: install.packages()</span></span>
+<span id="cb23-2"><a href="sentiment-analysis-tutorial.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb23-3"><a href="sentiment-analysis-tutorial.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext) <span class="co"># text-mining</span></span>
+<span id="cb23-4"><a href="sentiment-analysis-tutorial.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># data manipulation</span></span>
+<span id="cb23-5"><a href="sentiment-analysis-tutorial.html#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr) <span class="co"># facilitates strings manipulations</span></span>
+<span id="cb23-6"><a href="sentiment-analysis-tutorial.html#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble) <span class="co"># reimaging of dataframes</span></span>
+<span id="cb23-7"><a href="sentiment-analysis-tutorial.html#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># visualizations</span></span>
+<span id="cb23-8"><a href="sentiment-analysis-tutorial.html#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(textdata) <span class="co"># includes various sentiment lexicons and labeled text data sets</span></span></code></pre></div>
+<div id="what-is-sentiment-analysis" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> What is Sentiment Analysis?<a href="sentiment-analysis-tutorial.html#what-is-sentiment-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sentiment Analysis defines the process of extracting and evaluating the nature of opinion in documents, websites, social media, etc. These opinions are then classified based on a metric where they can be binary (positive or negative) or they can be classified into a multitude of classes (happy, sad, angry, etc.).</p>
+<div id="sentiment-lexicons" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Sentiment Lexicons<a href="sentiment-analysis-tutorial.html#sentiment-lexicons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sentiment lexicons refers to dictionaries that exist for evaluating text based on emotion/opinion. The <code>tidytext</code> package contains three sentiment lexicons in the <code>sentiments</code> dataset.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="sentiment-analysis-tutorial.html#cb24-1" aria-hidden="true" tabindex="-1"></a>sentiments</span></code></pre></div>
+<pre><code>## # A tibble: 6,786 × 2
+##    word        sentiment
+##    &lt;chr&gt;       &lt;chr&gt;    
+##  1 2-faces     negative 
+##  2 abnormal    negative 
+##  3 abolish     negative 
+##  4 abominable  negative 
+##  5 abominably  negative 
+##  6 abominate   negative 
+##  7 abomination negative 
+##  8 abort       negative 
+##  9 aborted     negative 
+## 10 aborts      negative 
+## # … with 6,776 more rows</code></pre>
+<p>The following are the three lexicons that are based on unigrams (single words) that are in English. The <code>AFFIN</code> lexicon uses a scoring system from -5 to 5 to assign a word with negative scores indicating negative sentiment and positive scores indicating positive sentiment. The <code>bing</code> lexicon uses a binary system where words are categorized as either positive or negative. The <code>nrc</code> lexicon has 10 categories that include positive, negative, anger, anticipation, disgust, fear, joy, sadness, surprise, and trust. Use the function <code>get_sentiment()</code> to get a specific sentiment lexicon.</p>
+<ul>
+<li><code>AFFIN</code> from <a href="http://www2.imm.dtu.dk/pubdb/pubs/6010-full.html">Finn Årup Nielsen</a></li>
+<li><code>bing</code> from <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html">Bing Liu and collaborators</a></li>
+<li><code>nrc</code> from <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">Saif Mohammad and Peter Turney</a></li>
+</ul>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="sentiment-analysis-tutorial.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># to see the individual lexicons </span></span>
+<span id="cb26-2"><a href="sentiment-analysis-tutorial.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">get_sentiments</span>(<span class="st">&quot;afinn&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 2,477 × 2
+##    word       value
+##    &lt;chr&gt;      &lt;dbl&gt;
+##  1 abandon       -2
+##  2 abandoned     -2
+##  3 abandons      -2
+##  4 abducted      -2
+##  5 abduction     -2
+##  6 abductions    -2
+##  7 abhor         -3
+##  8 abhorred      -3
+##  9 abhorrent     -3
+## 10 abhors        -3
+## # … with 2,467 more rows</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="sentiment-analysis-tutorial.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_sentiments</span>(<span class="st">&quot;bing&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 6,786 × 2
+##    word        sentiment
+##    &lt;chr&gt;       &lt;chr&gt;    
+##  1 2-faces     negative 
+##  2 abnormal    negative 
+##  3 abolish     negative 
+##  4 abominable  negative 
+##  5 abominably  negative 
+##  6 abominate   negative 
+##  7 abomination negative 
+##  8 abort       negative 
+##  9 aborted     negative 
+## 10 aborts      negative 
+## # … with 6,776 more rows</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="sentiment-analysis-tutorial.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_sentiments</span>(<span class="st">&quot;nrc&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 13,872 × 2
+##    word        sentiment
+##    &lt;chr&gt;       &lt;chr&gt;    
+##  1 abacus      trust    
+##  2 abandon     fear     
+##  3 abandon     negative 
+##  4 abandon     sadness  
+##  5 abandoned   anger    
+##  6 abandoned   fear     
+##  7 abandoned   negative 
+##  8 abandoned   sadness  
+##  9 abandonment anger    
+## 10 abandonment fear     
+## # … with 13,862 more rows</code></pre>
+</div>
+</div>
+<div id="case-study-performing-sentiment-analysis-on-novel" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Case Study: Performing Sentiment Analysis on Novel<a href="sentiment-analysis-tutorial.html#case-study-performing-sentiment-analysis-on-novel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will be analyzing the Charles Darwin book entitled “The Origin of Species.” We will clean (convert to lower case, remove white spaces, and remove stop words) and reform the data into a dataframe using the <code>dpylr</code>, <code>string</code>, and <code>tibble</code> packages. This process will facilitate the analysis of the text.</p>
+<p>Using the <code>readRDS()</code> from the base R package to write a single R object to a file, and to restore it. The parameters take in the following URL: <a href="https://slcladal.github.io/data/origindarwin.rda">https://slcladal.github.io/data/origindarwin.rda</a></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="sentiment-analysis-tutorial.html#cb32-1" aria-hidden="true" tabindex="-1"></a>darwin <span class="ot">&lt;-</span> base<span class="sc">::</span><span class="fu">readRDS</span>(<span class="fu">url</span>(<span class="st">&quot;https://slcladal.github.io/data/origindarwin.rda&quot;</span>, <span class="st">&quot;rb&quot;</span>))</span></code></pre></div>
+</div>
+<div id="pre-processing-data-tidy-text" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Pre-processing Data: Tidy-Text<a href="sentiment-analysis-tutorial.html#pre-processing-data-tidy-text" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before applying sentiment analysis, we will pre-process the data by cleaning and transforming it to allow for sentiment analysis application. The following text cleaning techniques were applied to the text to get rid of unnecessary characters or words that may interupt our sentiment analysis. The <code>txtclean()</code> function was created to clean the data by invoking the following:</p>
+<ul>
+<li>Convert all words to UTF - 8</li>
+<li>Convert all words to lower case</li>
+<li>Collapse paragraphs into single text</li>
+<li>Remove white spaces</li>
+<li>Split into individual words</li>
+<li>Convert to tabular data</li>
+<li>Remove predefined stop words</li>
+<li>Remove symbols</li>
+</ul>
+<p>The <code>tidytext</code> package will allow us to perform efficient text analysis on our data. We will convert the text of our novel into a tidy format using <code>unnest_tokens()</code> function. Tidy data has the following structure:</p>
+<ul>
+<li>Each variable is a column</li>
+<li>Each observation is a row</li>
+<li>Each type of observational unit is a table</li>
+</ul>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="sentiment-analysis-tutorial.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># process text data using txtclean()</span></span>
+<span id="cb33-2"><a href="sentiment-analysis-tutorial.html#cb33-2" aria-hidden="true" tabindex="-1"></a>darwin_data <span class="ot">&lt;-</span> <span class="fu">txtclean</span>(darwin, <span class="st">&quot;darwin&quot;</span>)</span>
+<span id="cb33-3"><a href="sentiment-analysis-tutorial.html#cb33-3" aria-hidden="true" tabindex="-1"></a>darwin_data</span></code></pre></div>
+<pre><code>## # A tibble: 76,710 × 2
+##    word       novel 
+##    &lt;chr&gt;      &lt;chr&gt; 
+##  1 origin     darwin
+##  2 species    darwin
+##  3 charles    darwin
+##  4 darwin     darwin
+##  5 historical darwin
+##  6 sketch     darwin
+##  7 progress   darwin
+##  8 opinion    darwin
+##  9 origin     darwin
+## 10 species    darwin
+## # … with 76,700 more rows</code></pre>
+<p>Now we have transformed the data into a tidy dataframe with two columns: <code>word</code> and <code>novel</code>. Note that there are currently 78,556 rows of words – this number will significantly reduce once the lexicon analysis is applied as we will later explain.</p>
+<div id="initial-analysis-wordclouds" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Initial Analysis: Wordclouds<a href="sentiment-analysis-tutorial.html#initial-analysis-wordclouds" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Before analyzing the sentiment of the novel, we can start an initial analysis of the words based on their frequency within the text. This allows us to gain some initial insight into patterns we might want to explore later. We can easily create word clouds via the <code>worldcloud</code> package which is facilitated by our tidy data. Word clouds are a descriptive tool and should only be used to capture basic qualitative insights at initial stages of analysis. They present text data in a simple and clear format where the cloud size of a word depends on their respective frequencies. They are visually easy and quick to understand.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="sentiment-analysis-tutorial.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer) <span class="co"># color palettes</span></span>
+<span id="cb35-2"><a href="sentiment-analysis-tutorial.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wordcloud) <span class="co"># word-cloud generator</span></span>
+<span id="cb35-3"><a href="sentiment-analysis-tutorial.html#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="sentiment-analysis-tutorial.html#cb35-4" aria-hidden="true" tabindex="-1"></a>darwin_wordcloud <span class="ot">&lt;-</span> darwin_data <span class="sc">%&gt;%</span></span>
+<span id="cb35-5"><a href="sentiment-analysis-tutorial.html#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word) <span class="sc">%&gt;%</span></span>
+<span id="cb35-6"><a href="sentiment-analysis-tutorial.html#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(<span class="fu">wordcloud</span>(word, n, <span class="at">max.words =</span> <span class="dv">100</span>, <span class="at">colors=</span><span class="fu">brewer.pal</span>(<span class="dv">8</span>, <span class="st">&quot;Dark2&quot;</span>)))</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="_main_files/figure-html/unnamed-chunk-10-1.png" alt="The most common words in Darwin's novel" width="480" />
+<p class="caption">
+Figure 2.1: The most common words in Darwin’s novel
+</p>
+</div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="sentiment-analysis-tutorial.html#cb36-1" aria-hidden="true" tabindex="-1"></a>darwin_wordcloud</span></code></pre></div>
+<pre><code>## NULL</code></pre>
+<p>As expected, a scientific book about evolution such as “The Origin of Species” contains frequent words like <em>species</em>, <em>selection</em>, and <em>natural</em>. Given the scientific nature of this book, the amount of rows of our data is expected to drop significantly since the lexicons only contain specific words that contain sentimental classification.</p>
+</div>
+<div id="sentiment-analysis-lexicon-application" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Sentiment Analysis: Lexicon Application<a href="sentiment-analysis-tutorial.html#sentiment-analysis-lexicon-application" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once tidy text is obtained, we can proceed to apply a sentiment lexicon by using <code>inner_join()</code> from the <code>dpylr</code> package.</p>
+<p>In this section we will:</p>
+<ul>
+<li>Explore the sentiment lexicons and their word counts</li>
+<li>Identify how many words from the book exist in the lexicons</li>
+<li>Look at specific words and word forms</li>
+</ul>
+<div id="creating-sentiment-datasets" class="section level4 hasAnchor" number="2.3.2.1">
+<h4><span class="header-section-number">2.3.2.1</span> Creating Sentiment Datasets<a href="sentiment-analysis-tutorial.html#creating-sentiment-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Below we created data sets based on specific lexicons. This will facilitate our visualizations in the following sections.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="sentiment-analysis-tutorial.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># afinn dataset</span></span>
+<span id="cb38-2"><a href="sentiment-analysis-tutorial.html#cb38-2" aria-hidden="true" tabindex="-1"></a>darwin_afinn <span class="ot">&lt;-</span> darwin_data <span class="sc">%&gt;%</span></span>
+<span id="cb38-3"><a href="sentiment-analysis-tutorial.html#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">&quot;afinn&quot;</span>))</span>
+<span id="cb38-4"><a href="sentiment-analysis-tutorial.html#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(darwin_afinn)</span></code></pre></div>
+<pre><code>## [1] 4639</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="sentiment-analysis-tutorial.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># bing dataset</span></span>
+<span id="cb40-2"><a href="sentiment-analysis-tutorial.html#cb40-2" aria-hidden="true" tabindex="-1"></a>darwin_bing <span class="ot">&lt;-</span> darwin_data <span class="sc">%&gt;%</span></span>
+<span id="cb40-3"><a href="sentiment-analysis-tutorial.html#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">&quot;bing&quot;</span>))</span>
+<span id="cb40-4"><a href="sentiment-analysis-tutorial.html#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(darwin_bing)</span></code></pre></div>
+<pre><code>## [1] 6210</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="sentiment-analysis-tutorial.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nrc dataset</span></span>
+<span id="cb42-2"><a href="sentiment-analysis-tutorial.html#cb42-2" aria-hidden="true" tabindex="-1"></a>darwin_nrc <span class="ot">&lt;-</span> darwin_data <span class="sc">%&gt;%</span></span>
+<span id="cb42-3"><a href="sentiment-analysis-tutorial.html#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">&quot;nrc&quot;</span>))</span>
+<span id="cb42-4"><a href="sentiment-analysis-tutorial.html#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(darwin_nrc)</span></code></pre></div>
+<pre><code>## [1] 26394</code></pre>
+<p>As predicted, the number of rows reduced after each lexicon was applied. The <code>afinn</code> lexicon significantly reduced the row dimensions from 78,556 rows of words to 4,758. The <code>bing</code> lexicon resulted in 6,378 rows whereas the <code>nrc</code> lexicon has the greatest amount at 27,156 rows. This may be due to its multi-categorical nature since it is able to encapsulate more words.</p>
+</div>
+</div>
+</div>
+<div id="most-common-words" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Most Common Words<a href="sentiment-analysis-tutorial.html#most-common-words" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Since we have a tidy dataframe, we can easily display the most common positive and negative words. This is done by analyzing word counts that contribute to each sentiment. By implementing <code>count()</code> with arguments of both <code>word</code> and <code>sentiment</code>, we find out each word’s sentimental contribution.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="sentiment-analysis-tutorial.html#cb44-1" aria-hidden="true" tabindex="-1"></a>afinn_word_counts <span class="ot">&lt;-</span> darwin_afinn <span class="sc">%&gt;%</span> </span>
+<span id="cb44-2"><a href="sentiment-analysis-tutorial.html#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#summarise(sentiment = sum(value)) %&gt;% </span></span>
+<span id="cb44-3"><a href="sentiment-analysis-tutorial.html#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">method =</span> <span class="st">&quot;AFINN&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb44-4"><a href="sentiment-analysis-tutorial.html#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, <span class="at">sentiment =</span> value, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb44-5"><a href="sentiment-analysis-tutorial.html#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="sentiment-analysis-tutorial.html#cb44-6" aria-hidden="true" tabindex="-1"></a>afinn_word_counts</span></code></pre></div>
+<pre><code>## # A tibble: 544 × 3
+##    word       sentiment     n
+##    &lt;chr&gt;          &lt;dbl&gt; &lt;int&gt;
+##  1 natural            1   491
+##  2 doubt             -1   106
+##  3 perfect            3   100
+##  4 importance         2    90
+##  5 increase           1    80
+##  6 struggle          -2    80
+##  7 true               2    79
+##  8 advantage          2    72
+##  9 chance             2    64
+## 10 improved           2    62
+## # … with 534 more rows</code></pre>
+<p>Now we will count the <code>darwin_bing</code> data set which assigns a binary classification of positive and negative sentiment.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="sentiment-analysis-tutorial.html#cb46-1" aria-hidden="true" tabindex="-1"></a>bing_word_counts <span class="ot">&lt;-</span> darwin_bing <span class="sc">%&gt;%</span></span>
+<span id="cb46-2"><a href="sentiment-analysis-tutorial.html#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, sentiment, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb46-3"><a href="sentiment-analysis-tutorial.html#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb46-4"><a href="sentiment-analysis-tutorial.html#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="sentiment-analysis-tutorial.html#cb46-5" aria-hidden="true" tabindex="-1"></a>bing_word_counts <span class="do">## probably dont need to display</span></span></code></pre></div>
+<pre><code>## # A tibble: 995 × 3
+##    word       sentiment     n
+##    &lt;chr&gt;      &lt;chr&gt;     &lt;int&gt;
+##  1 doubt      negative    106
+##  2 perfect    positive    100
+##  3 difficulty negative     96
+##  4 variety    positive     93
+##  5 struggle   negative     80
+##  6 respect    positive     77
+##  7 slowly     negative     74
+##  8 advantage  positive     72
+##  9 complex    negative     68
+## 10 improved   positive     62
+## # … with 985 more rows</code></pre>
+<p>Similarly, we count <code>darwin_nrc</code> data set which contains multiple categories of sentiment.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="sentiment-analysis-tutorial.html#cb48-1" aria-hidden="true" tabindex="-1"></a>nrc_word_counts <span class="ot">&lt;-</span> darwin_nrc <span class="sc">%&gt;%</span></span>
+<span id="cb48-2"><a href="sentiment-analysis-tutorial.html#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, sentiment, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb48-3"><a href="sentiment-analysis-tutorial.html#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb48-4"><a href="sentiment-analysis-tutorial.html#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-5"><a href="sentiment-analysis-tutorial.html#cb48-5" aria-hidden="true" tabindex="-1"></a>nrc_word_counts</span></code></pre></div>
+<pre><code>## # A tibble: 2,990 × 3
+##    word      sentiment        n
+##    &lt;chr&gt;     &lt;chr&gt;        &lt;int&gt;
+##  1 structure positive       243
+##  2 structure trust          243
+##  3 time      anticipation   236
+##  4 degree    positive       206
+##  5 found     joy            166
+##  6 found     positive       166
+##  7 found     trust          166
+##  8 organic   positive       160
+##  9 theory    anticipation   155
+## 10 theory    trust          155
+## # … with 2,980 more rows</code></pre>
+</div>
+<div id="visualizations" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Visualizations<a href="sentiment-analysis-tutorial.html#visualizations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that we have the word counts of the data set with respect to each lexicon, we can start visualizing the text to see the most common positive and negative words. By doing so, we can see the contribution of certain words based on their sentiment contribution within the text.</p>
+<div id="positive---bar-chart-with-afinn" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Positive - Bar Chart with Afinn<a href="sentiment-analysis-tutorial.html#positive---bar-chart-with-afinn" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Using the <code>afinn_word_counts</code> variable we can use the <code>mutate()</code> to create a new variable known as <code>sentiment_severity</code> which accounts for the sentiment contribution of a word based on the its frequency appearance and score. Using <code>ggplot2</code> we can visually see the contribution that each common positive (score &gt;= 0) and negative (score &lt; 0) word had with respect to sentiment.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="sentiment-analysis-tutorial.html#cb50-1" aria-hidden="true" tabindex="-1"></a>afinn_plot <span class="ot">&lt;-</span> afinn_word_counts <span class="sc">%&gt;%</span></span>
+<span id="cb50-2"><a href="sentiment-analysis-tutorial.html#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sentiment_severity =</span> sentiment <span class="sc">*</span> n) <span class="sc">%&gt;%</span></span>
+<span id="cb50-3"><a href="sentiment-analysis-tutorial.html#cb50-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(n, <span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb50-4"><a href="sentiment-analysis-tutorial.html#cb50-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb50-5"><a href="sentiment-analysis-tutorial.html#cb50-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">reorder</span>(word, n)) <span class="sc">%&gt;%</span></span>
+<span id="cb50-6"><a href="sentiment-analysis-tutorial.html#cb50-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(sentiment_severity, word, <span class="at">fill =</span> sentiment_severity)) <span class="sc">+</span></span>
+<span id="cb50-7"><a href="sentiment-analysis-tutorial.html#cb50-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb50-8"><a href="sentiment-analysis-tutorial.html#cb50-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Contribution to sentiment&quot;</span>,</span>
+<span id="cb50-9"><a href="sentiment-analysis-tutorial.html#cb50-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Most Contributing Words&quot;</span>,</span>
+<span id="cb50-10"><a href="sentiment-analysis-tutorial.html#cb50-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">&quot;Sentiment Severity Score&quot;</span>) <span class="sc">+</span></span>
+<span id="cb50-11"><a href="sentiment-analysis-tutorial.html#cb50-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Charles Darwin Afinn Sentiment&quot;</span>)</span>
+<span id="cb50-12"><a href="sentiment-analysis-tutorial.html#cb50-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-13"><a href="sentiment-analysis-tutorial.html#cb50-13" aria-hidden="true" tabindex="-1"></a>afinn_plot</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<img src="_main_files/figure-html/unnamed-chunk-15-1.png" alt="Afinn Words that contribute to positive and negative sentiment in Darwin's Novel" width="480" />
+<p class="caption">
+Figure 2.2: Afinn Words that contribute to positive and negative sentiment in Darwin’s Novel
+</p>
+</div>
+<p>Based on the legend, a sentiment severity score closer to 400 will indicate a word that is most frequent and most positive within the text. A negative sentiment severity score closer to zero will indicate a word that is least frequent and most negative within the text.</p>
+</div>
+<div id="wordclouds-with-bing" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Wordclouds with Bing<a href="sentiment-analysis-tutorial.html#wordclouds-with-bing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can further analyze wordclouds with sentiment analysis using the <code>comparison.cloud()</code> function where our current dataframe must be turned into a matrix via <code>acast()</code> which is located in the <code>reshape2’s</code>. Now we can conduct sentiment analysis using a <code>inner_join</code> on positive and negative words via the <code>bing</code> lexicon which is already incorporated within <code>bing_word_counts</code>.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="sentiment-analysis-tutorial.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span>
+<span id="cb51-2"><a href="sentiment-analysis-tutorial.html#cb51-2" aria-hidden="true" tabindex="-1"></a>bing_wc_plot <span class="ot">&lt;-</span> bing_word_counts <span class="sc">%&gt;%</span></span>
+<span id="cb51-3"><a href="sentiment-analysis-tutorial.html#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">acast</span>(word <span class="sc">~</span> sentiment, <span class="at">value.var =</span> <span class="st">&quot;n&quot;</span>, <span class="at">fill =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb51-4"><a href="sentiment-analysis-tutorial.html#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">comparison.cloud</span>(<span class="at">colors =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;dark green&quot;</span>),</span>
+<span id="cb51-5"><a href="sentiment-analysis-tutorial.html#cb51-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">max.words =</span> <span class="dv">100</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<img src="_main_files/figure-html/unnamed-chunk-16-1.png" alt="Bing Words that contribute to positive and negative sentiment in Darwin's Novel" width="480" />
+<p class="caption">
+Figure 2.3: Bing Words that contribute to positive and negative sentiment in Darwin’s Novel
+</p>
+</div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="sentiment-analysis-tutorial.html#cb52-1" aria-hidden="true" tabindex="-1"></a>bing_wc_plot</span></code></pre></div>
+<pre><code>## NULL</code></pre>
+<p>The above word cloud illustrates the words that are most and least common within the text based on frequency. The larger the word the more frequent and the smaller the word then the least frequent. Unlike the word cloud previously generated in figure 1, this one allows us to classify between positive and negative words since we applied <code>comparison.cloud()</code> function to the variable <code>bing_word_counts</code>. This word cloud enables us to efficiently visualize the negative (red words) as well as positive groups (green words) of data. The above plot shows that words like <em>doubt</em> have a heavy presence that leans towards negative sentiment whereas words like <em>favour</em> are not as prevalent and tend to be more positive.</p>
+</div>
+<div id="bar-graph-with-nrc" class="section level3 hasAnchor" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> Bar Graph with NRC<a href="sentiment-analysis-tutorial.html#bar-graph-with-nrc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The plot below shows the total number of instances of words in the text, associated with each of the ten emotions. Using the <code>ggplolt()</code> function we can easily plot the word counts of words that are classified based on the the <code>NRC</code> lexicon which contains multiple categories.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="sentiment-analysis-tutorial.html#cb54-1" aria-hidden="true" tabindex="-1"></a>nrc_plot <span class="ot">&lt;-</span> darwin_nrc <span class="sc">%&gt;%</span></span>
+<span id="cb54-2"><a href="sentiment-analysis-tutorial.html#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sentiment) <span class="sc">%&gt;%</span></span>
+<span id="cb54-3"><a href="sentiment-analysis-tutorial.html#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">word_count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb54-4"><a href="sentiment-analysis-tutorial.html#cb54-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb54-5"><a href="sentiment-analysis-tutorial.html#cb54-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sentiment =</span> <span class="fu">reorder</span>(sentiment, word_count)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-6"><a href="sentiment-analysis-tutorial.html#cb54-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(sentiment, word_count, <span class="at">fill =</span> sentiment)) <span class="sc">+</span></span>
+<span id="cb54-7"><a href="sentiment-analysis-tutorial.html#cb54-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb54-8"><a href="sentiment-analysis-tutorial.html#cb54-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Sentiment Categories&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Word Count&quot;</span>) <span class="sc">+</span></span>
+<span id="cb54-9"><a href="sentiment-analysis-tutorial.html#cb54-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Charles Darwin NRC Sentiment&quot;</span>)</span>
+<span id="cb54-10"><a href="sentiment-analysis-tutorial.html#cb54-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-11"><a href="sentiment-analysis-tutorial.html#cb54-11" aria-hidden="true" tabindex="-1"></a>nrc_plot</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<img src="_main_files/figure-html/unnamed-chunk-17-1.png" alt="NRC Words that contribute to categorical sentiment in Darwin's Novel" width="672" />
+<p class="caption">
+Figure 2.4: NRC Words that contribute to categorical sentiment in Darwin’s Novel
+</p>
+</div>
+<p>This bar chart demonstrates that positively oriented words categorized under <em>positive</em> are about 6 times more likely to appear within the text in comparison to <em>disgust</em> words. In general, the negatively oriented words are much less frequent.</p>
+</div>
+</div>
+<div id="summary" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Summary<a href="sentiment-analysis-tutorial.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this tutorial, we went through a simplified sentiment analysis project in R that was implemented over the dataset of Charles Darwin’s book entitled “The Origin of Species.” We started by transforming the data into tidy data by using packages such as <code>tidytext</code> and <code>dpylr</code>. When text data is in a tidy data structure then we can implement sentiment analysis using <code>inner_join()</code>in conjunction with a specified lexicon. We then proceeded to get the most common positive and negative words within the text along with its sentiment contribution. In conclusion, we used sentiment analysis to understand what words are important based on emotional and opinion content by exploring visualizations.</p>
+</div>
+<div id="references" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> References<a href="sentiment-analysis-tutorial.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Mohammad, Saif M, and Peter D Turney. 2013. “Crowdsourcing a Word-Emotion Association Lexicon.” Computational Intelligence 29 (3): 436–65.</p>
+<p>Schweinberger, Martin. (2022)` Sentiment Analysis in R. Brisbane: The University of Queensland. url: <a href="https://ladal.edu.au/sentiment.html" class="uri">https://ladal.edu.au/sentiment.html</a> (Version 2022.10.30).</p>
+<p>Silge, Julia, and David Robinson. 2017. Text Mining with r: A Tidy Approach. ” O’Reilly Media, Inc.”.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
